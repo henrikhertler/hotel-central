@@ -1,23 +1,12 @@
-import Pricing from 'components/Pricing';
-import { getActiveProductsWithPrices } from 'utils/supabase-client';
-import { Product } from 'types';
-import { GetStaticPropsResult } from 'next';
-
-interface Props {
-  products: Product[];
-}
-
-export default function PricingPage({ products }: Props) {
-  return <Pricing products={products} />;
-}
-
-export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-  const products = await getActiveProductsWithPrices();
-
-  return {
-    props: {
-      products
-    },
-    revalidate: 60
-  };
+export default function IndexPage() {
+  return (
+    <section className="bg-black">
+      <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="sm:flex sm:flex-col sm:align-center"></div>
+        <p className="text-6xl font-extrabold text-white sm:text-center sm:text-6xl">
+          Hotel Central
+        </p>
+      </div>
+    </section>
+  );
 }

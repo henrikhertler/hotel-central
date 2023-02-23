@@ -1,12 +1,13 @@
 {
-  "name": "nextjs-subscription-payments",
-  "version": "0.0.0",
+  "name": "hotel-central",
+  "version": "0.1.1",
   "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "stripe:listen": "stripe listen --forward-to=localhost:3000/api/webhooks --project-name=saas-starter"
+    "stripe:listen": "stripe listen --forward-to=localhost:3000/api/webhooks --project-name=saas-starter",
+    "type-check": "tsc"
   },
   "dependencies": {
     "@stripe/stripe-js": "1.22.0",
