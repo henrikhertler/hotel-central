@@ -34,9 +34,19 @@
     "typescript": "^4.5.5"
   },
   "prettier": {
-    "arrowParens": "always",
+    "trailingComma": "all",
     "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
+    "tabWidth": 4,
+    "semi": true,
+    "printWidth": 120,
+    "quoteProps": "as-needed",
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "bracketSameLine": true,
+    "endOfLine": "auto",
+    "arrowParens": "always",
+    "htmlWhitespaceSensitivity": "css",
+    "embeddedLanguageFormatting": "auto",
+    "singleAttributePerLine": false
   }
 }
