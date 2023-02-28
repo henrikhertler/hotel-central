@@ -39,7 +39,7 @@ html {
 
 html,
 body {
-    font-family: Gerstner-Programm-Bold, 'Times', -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+    font-family: Gerstner-Programm-Bold, -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
