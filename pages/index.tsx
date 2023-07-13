@@ -52,15 +52,65 @@ export default function IndexPage() {
             </div>
 
             <div className='flex md:flex-row flex-col md:items-start items-center justify-between md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div className='bg-white text-black rounded p-6 px-8 text-center'>
-                    <p className='uppercase tracking-wider mb-4'>Folge uns</p>
-                    <a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
-                        @hotel__central
-                    </a>
+                <div>
+                    <div className='bg-white text-black rounded p-6 px-8 text-center'>
+                        <p className='uppercase tracking-wider mb-4'>Folge uns</p>
+                        <a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
+                            @hotel__central
+                        </a>
+                    </div>
+                    <div className='bg-white text-black rounded p-6 px-8 text-center mt-20'>
+                        <p className='uppercase tracking-wider mb-4'>Werde Mitglied!</p>
+                        <a className='text-2xl' target='_blank' href='/HotelCentral_230710_Mitgliedschaftsantrag.pdf'>
+                            Download Antrag
+                        </a>
+                    </div>
                 </div>
                 <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center'>
                     <p className='uppercase tracking-wider mb-4'>Upcoming Events</p>
-                    <p>1. März | 19 Uhr</p>
+                    <p>19. Juli | 19 Uhr</p>
+                    <p className='text-3xl'>
+                        Wie geht …
+                        <br />
+                        Kulturelle
+                        <br />
+                        Zwischennutzung
+                    </p>
+                    <p className='mt-1'>1. März | Steinstr. 13</p>
+                </div>
+            </div>
+
+            <div className='flex md:flex-row flex-col items-center justify-end md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
+                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12 mr-14'>
+                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
+                    <p>27. April | 19 Uhr</p>
+                    <p className='text-3xl'>
+                        Panel Talk:
+                        <br />
+                        Frauen* in
+                        <br />
+                        der Musik
+                    </p>
+                    <p className='mt-1'>1. März | Steinstr. 13</p>
+                </div>
+            </div>
+
+            <div className='flex md:flex-row flex-col md:items-start items-center justify-between md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
+                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center md:w-5/12'>
+                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
+                    <p>29. März bis 16. Mai</p>
+                    <p className='text-3xl'>
+                        Workshop
+                        <br />
+                        Suite
+                        <br />
+                        Pt. 1
+                    </p>
+                    <p className='mt-1'>1. März | Steinstr. 13</p>
+                </div>
+                <div className='bg-white text-black mt-56 rounded p-6 px-8 text-center md:w-5/12'>
+                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
+                    <p>01. März | 19 Uhr</p>
                     <p className='text-3xl'>
                         Hotel-Central:
                         <br />
@@ -68,7 +118,7 @@ export default function IndexPage() {
                         <br />
                         with
                         <br />
-                        Surprise Guest
+                        Surprise Guests
                     </p>
                     <p className='mt-1'>1. März | Steinstr. 13</p>
                 </div>
