@@ -25,26 +25,43 @@ export default function IndexPage() {
                     Angaben gemäß § 5 TMG
                     <br />
                     <br />
-                    Room Service Europe GmbH – Marienstraße 37 – 70178 Stuttgart
+                    Hotel Central e.V.
+                    <br />
+                    „Treffpunkt für Kreativität und Vernetzung in Stuttgart”
+                    <br />
+                    Steinstraße 13, 70173 Stuttgart
                     <br />
                     <br />
-                    Geschäftsführer/-in: Anna Ross, Saeed Kakavand
+                    Vereinsregister: 726008
+                    <br />
+                    Registergericht: Stuttgart
                     <br />
                     <br />
-                    Sitz und Registergericht: Stuttgart HRB 756204
+                    Vertreten durch:
+                    <br />
+                    Anna Roß
+                    <br />
+                    Benjamin Straub
+                    <br />
+                    Colyn Heinz
+                    <br />
+                    Felix Göppel
+                    <br />
+                    Saeed Kakavand
                     <br />
                     <br />
-                    Umsatzsteuer-ID: Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE277299459
+                    <br />
+                    Kontakt
+                    <br />
+                    E-Mail: hello[at]welcome-to-hotel-central.eu
                     <br />
                     <br />
-                    Mitglied Industrie- und Handelskammer Stuttgart
+                    Redaktionell verantwortlich
                     <br />
+                    Saeed Kakavand
                     <br />
-                    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Anna Ross, Saeed Kakavand Marienstraße 37 –
-                    70178 Stuttgart
+                    Colyn Heinze
                     <br />
-                    <br />
-                    Kontakt: saeed@call-roomservice.eu
                 </p>
             </div>
 

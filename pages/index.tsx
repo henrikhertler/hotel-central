@@ -61,13 +61,30 @@ export default function IndexPage() {
                     </div>
                     <div className='bg-white text-black rounded p-6 px-8 text-center mt-20'>
                         <p className='uppercase tracking-wider mb-4'>Werde Mitglied!</p>
-                        <a className='text-2xl' target='_blank' href='/HotelCentral_230710_Mitgliedschaftsantrag.pdf'>
+                        <a className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
                             Download Antrag
                         </a>
                     </div>
                 </div>
-                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center'>
+                {/*<div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center'>
                     <p className='uppercase tracking-wider mb-4'>Upcoming Events</p>
+                </div>*/}
+            </div>
+
+            <div className='flex md:flex-row flex-col items-center justify-end md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
+                <a href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
+                    <div className='flex flex-col items-center bg-black text-white md:mt-8 mt-40 rounded p-6 px-12 text-center mr-14'>
+                        <p className='uppercase tracking-wider mb-4'>
+                            Folge unserem <br /> lobby radio
+                        </p>
+                        <img src={'/icon__lobby--radio.svg'} alt={'lobby radio'} width='100px' />
+                    </div>
+                </a>
+            </div>
+
+            <div className='flex md:flex-row flex-col items-center justify-start md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
+                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12'>
+                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
                     <p>19. Juli | 19 Uhr</p>
                     <p className='text-3xl'>
                         Wie geht …
@@ -131,7 +148,7 @@ export default function IndexPage() {
             <div className='self-center md:w-1/3 w-10/12 md:mt-60 text-center z-10'>
                 <p className='text-black'>gefördert von</p>
                 <div className='flex md:flex-row flex-col items-start justify-between items-center mt-8'>
-                    <img src='/icon_initiative.png' alt='Initiative Musik' className='md:w-1/4 w-1/2 mb-4' />
+                    <img src='/icon__initiative--musik.svg' alt='Initiative Musik' className='md:w-1/4 w-1/2 mb-4' />
                     <img src='/icon_stuttgart.svg' alt='Stadt Stuttgart' className='md:w-1/4 w-1/2 mb-8' />
                     <img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' className='md:w-1/4 w-1/2 mb-4' />
                 </div>
