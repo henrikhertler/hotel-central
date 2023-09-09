@@ -83,7 +83,7 @@ export default function IndexPage() {
             </div>
 
             <div className='flex md:flex-row flex-col items-center justify-start md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12'>
+                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12 break-words'>
                     <p className='uppercase tracking-wider mb-4'>Past Events</p>
                     <p>19. Juli | 19 Uhr</p>
                     <p className='text-3xl'>
@@ -147,7 +147,7 @@ export default function IndexPage() {
 
             <div className='self-center md:w-1/3 w-10/12 md:mt-60 text-center z-10'>
                 <p className='text-black'>gefördert von</p>
-                <div className='flex md:flex-row flex-col items-start justify-between items-center mt-8'>
+                <div className='flex md:flex-row flex-col justify-between items-center mt-8'>
                     <img src='/icon__initiative--musik.svg' alt='Initiative Musik' className='md:w-1/4 w-1/2 mb-4' />
                     <img src='/icon_stuttgart.svg' alt='Stadt Stuttgart' className='md:w-1/4 w-1/2 mb-8' />
                     <img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' className='md:w-1/4 w-1/2 mb-4' />
