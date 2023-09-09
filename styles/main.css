@@ -2,51 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Gerstner-Programm-Bold;
+    src: url('/fonts/Gerstner-ProgrammBold.otf') format('opentype'),
+    url('/fonts/Gerstner-ProgrammBold.woff') format('woff'),
+    url('/fonts/Gerstner-ProgrammBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Gerstner-Programm-Bold-Italic;
+    src: url('/fonts/Gerstner-ProgrammBoldItalic.otf') format('opentype'),
+    url('/fonts/Gerstner-ProgrammBoldItalic.woff') format('woff'),
+    url('/fonts/Gerstner-ProgrammBoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 *:focus {
-  @apply outline-none ring-2 ring-pink-500 ring-opacity-50;
+    @apply outline-none ring-2 ring-pink-500 ring-opacity-50;
 }
 
 html {
-  height: 100%;
-  box-sizing: border-box;
-  touch-action: manipulation;
-  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+    height: 100%;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
 }
 
 html,
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+    font-family: Gerstner-Programm-Bold, -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  @apply text-white bg-zinc-800 antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    @apply text-white antialiased;
 }
 
 body {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    background-color: #FBE5E9;
+    background-image: url('/background_1x-min.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        background-image: url('/background_2x-min.jpg');
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+    body {
+        background-image: url('/background_3x-min.jpg');
+    }
 }
 
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .height-screen-helper {
-  height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
 }
