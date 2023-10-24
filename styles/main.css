@@ -97,6 +97,8 @@ a {
 }
 
 #festival {
+    position: relative;
+    overflow-x: hidden;
     background-image: url('/violet-bg.png');
     background-size: cover;
     background-position: top;
@@ -107,7 +109,6 @@ a {
         position: absolute;
         background-image: linear-gradient(rgba(var(--violetRGB), 0.7), rgba(var(--violetRGB), 0.3), rgba(255,255,255, 0));
         clip-path: polygon(50% 0, 100% 100%, 0 100%);
-        width: 100%;
         height: 300px;
         opacity: 1;
     }
@@ -115,6 +116,7 @@ a {
     .smiley {
         position: absolute;
         width: 250px;
+        z-index: 99;
 
         & svg {
             color: var(--violet);

@@ -46,10 +46,19 @@ export default function FestivalComponent() {
             <div ref={smileyRef} className='smiley'>
                 <SmileyRing />
             </div>
-            <div className='big-text text-center text-[5rem] leading-[5.5rem] md:text-[8rem] md:leading-[7.5rem]'>
-                <div ref={tria_1} className='triangle top-[80px]' />
-                <div ref={tria_2} className='triangle top-[210px]' />
-                <div ref={tria_3} className='triangle top-[340px]' />
+            <div className='big-text relative text-center text-[5rem] leading-[5.5rem] md:text-[8rem] md:leading-[7.5rem] overflow-hidden'>
+                <div
+                    ref={tria_1}
+                    className='triangle top-[0] md:top-[80px] w-[250%] left-[-75%] md:w-[100%] md:left-[0]'
+                />
+                <div
+                    ref={tria_2}
+                    className='triangle top-[75px] md:top-[210px] w-[250%] left-[-75%] md:w-[100%] md:left-[0]'
+                />
+                <div
+                    ref={tria_3}
+                    className='triangle top-[175px] md:top-[340px] w-[250%] left-[-75%] md:w-[100%] md:left-[0]'
+                />
                 <div className='text'>
                     <p ref={word_1}>Culture</p>
                     <p className='hidden' ref={word_4}>
@@ -88,15 +97,15 @@ export default function FestivalComponent() {
             </div>
 
             <div className='date flex flex-col'>
-                <span className='text-[2rem] md:text-[2.5rem]'>01. – 19. November 2023</span>
+                <span className='text-[1.5rem] md:text-[2.5rem]'>01. – 19. November 2023</span>
                 <span className='self-end'>
                     für Kreative, Musiker*innen, <br />
                     Partygänger*innen und Interessierte
                 </span>
             </div>
 
-            <div className='w-full flex flex-col justify-center items-center pt-[120px] md:pt-[220px] p-6'>
-                <LogoSmiley className='w-[40%] text-white' />
+            <div className='w-full flex flex-col justify-center items-center pt-[340px] md:pt-[220px] p-6'>
+                <LogoSmiley className='w-[80%] md:w-[40%] text-white' />
                 <RosaGraph className='w-[30%] absolute left-[-20px]' />
             </div>
 
