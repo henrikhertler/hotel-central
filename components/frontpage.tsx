@@ -68,9 +68,15 @@ export default function Frontpage() {
                         </a>
                     </div>
                 </div>
-                {/*<div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center'>
-                    <p className='uppercase tracking-wider mb-4'>Upcoming Events</p>
-                </div>*/}
+                <Link href='/festival'>
+                    <div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[#ffa3b5]'>
+                        <p className='pt-3 uppercase tracking-wider mb-4'>
+                            Hotel Central
+                            <br />
+                            Festival
+                        </p>
+                    </div>
+                </Link>
             </div>
 
             <div className='flex md:flex-row flex-col items-center justify-end md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>

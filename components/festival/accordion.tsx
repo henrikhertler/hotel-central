@@ -49,7 +49,7 @@ export const Accordion: React.FC<AccordionProps> = ({ time, title, pills, sublin
                     </div>
                     <div
                         onClick={toggleAccordion}
-                        className={`cursor-pointer bg-[#ffa3b5] rounded-full inline-block ${rotate}`}>
+                        className={`mt-4 md:mt-0 cursor-pointer bg-[#ffa3b5] rounded-full inline-block ${rotate}`}>
                         <svg
                             className='fill-current text-white'
                             xmlns='http://www.w3.org/2000/svg'

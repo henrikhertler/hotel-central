@@ -28,7 +28,7 @@ export default function Workshops() {
                                                     <div className='w-[150px]'>
                                                         <span
                                                             dangerouslySetInnerHTML={{
-                                                                __html: workshop.person.description ?? '',
+                                                                __html: workshop.person.description ?? ' ',
                                                             }}
                                                         />
                                                     </div>
