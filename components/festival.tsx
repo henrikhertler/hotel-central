@@ -1,12 +1,19 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import SmileyRing from '@/components/icons/smiley';
 import LogoSmiley from '@/components/icons/logoSmiley';
 import RosaGraph from '@/components/icons/rosaGraph';
 import SupporterLogos from '@/components/supporterLogos';
 import Link from 'next/link';
 import { creatMouseSpinner, imageAroundMouse, triaAnimation, welcomeTextAnimation } from '../utility/animations';
+import Workshops from '@/components/festival/workshops';
+import Marathon from '@/components/festival/marathon';
+
+enum PROG_STATE {
+    workshop = 'workshop',
+    festival = 'festival',
+}
 
 export default function FestivalComponent() {
     const smileyRef = useRef<any>();
@@ -19,6 +26,8 @@ export default function FestivalComponent() {
     const word_4 = useRef<any>();
     const word_5 = useRef<any>();
     const word_6 = useRef<any>();
+
+    const [progState, setProgState] = useState(PROG_STATE.workshop);
 
     useLayoutEffect(() => {
         if (smileyRef.current) {
@@ -43,7 +52,7 @@ export default function FestivalComponent() {
 
     return (
         <section className='flex flex-col content-center' onMouseMove={(e) => imageAroundMouse(e, smileyRef.current)}>
-            <div ref={smileyRef} className='smiley'>
+            <div ref={smileyRef} className='smiley pointer-events-none'>
                 <SmileyRing />
             </div>
             <div className='big-text relative text-center text-[5rem] leading-[5.5rem] md:text-[8rem] md:leading-[7.5rem] overflow-hidden'>
@@ -83,7 +92,7 @@ export default function FestivalComponent() {
                 </div>
             </div>
 
-            <div className='description md:mt-[-10px]'>
+            <div className='description md:mt-[-4px]'>
                 <div className='location flex'>
                     <span>Hotel Central Steinstraße 13, 70173 Stuttgart</span>
                 </div>
@@ -107,6 +116,23 @@ export default function FestivalComponent() {
             <div className='w-full flex flex-col justify-center items-center pt-[340px] md:pt-[220px] p-6'>
                 <LogoSmiley className='w-[80%] md:w-[40%] text-white' />
                 <RosaGraph className='w-[30%] absolute left-[-20px]' />
+            </div>
+
+            <div className='w-3/4 self-center'>
+                <div className='flex self-center bg-[#F5F5F5] text-[#ffa3b5] text-2xl cursor-pointer'>
+                    <div
+                        onClick={() => setProgState(PROG_STATE.workshop)}
+                        className={`w-1/2 p-2 ${progState === PROG_STATE.workshop ? 'text-black bg-[#ffa3b5]' : ''}`}>
+                        Workshop Suite
+                    </div>
+                    <div
+                        onClick={() => setProgState(PROG_STATE.festival)}
+                        className={`w-1/2 p-2 ${progState === PROG_STATE.festival ? 'text-black bg-[#ffa3b5]' : ''}`}>
+                        Festival Marathon
+                    </div>
+                </div>
+                {progState === PROG_STATE.workshop && <Workshops />}
+                {progState === PROG_STATE.festival && <Marathon />}
             </div>
 
             <div className='flex justify-center pt-[220px] md:pt-[20px] pb-[100px]'>

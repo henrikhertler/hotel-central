@@ -49,8 +49,7 @@ export default function Frontpage() {
                     <br />
                     <br />
                     <br />
-                    Hotel Central e.V. ist ein gemeinnütziger Verein, der alle dazu einlädt, Teil unserer Vision und
-                    Idee zu werden.
+                    Hotel Central e.V. ist ein Verein, der alle dazu einlädt, Teil unserer Vision und Idee zu werden.
                 </p>
             </div>
 

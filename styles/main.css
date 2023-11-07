@@ -192,4 +192,19 @@ a {
             border-bottom: 4px solid white;
         }
     }
+
+    .festivalDay {
+        background-color: var(--rosa);
+    }
+
+    .pill {
+        background-color: #FFFFFF;
+        color: var(--rosa);
+        border: 1px solid var(--rosa);
+        border-radius: 15px;
+    }
+
+    & a {
+        text-decoration: underline;
+    }
 }

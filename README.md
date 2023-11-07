@@ -8,4 +8,4 @@ SO ENTSTEHEN NEUE ETAGEN UND DAS HOTEL CENTRAL ERWACHT ZUM LEBEN.
 Der Austausch zwischen bekannten Professionals und jungen, aufstrebenden Kreativen ist ein wichtiger Bestandteil unserer Idee. Hierbei greifen wir auf unsere langjährige Erfahrung und Kenntnisse über die ansässige Subkultur zurück und bringen etablierte Protagonist:innen mit jungen Talenten zusammen. Wir glauben nicht nur daran, dass kreative Projekte besser werden, wenn verschiedene Menschen mit unterschiedlichem Background daran arbeiten. Wir glauben auch daran, dass die Welt eine bessere ist, wenn sich Menschen gegenseitig inspirieren, unterstützen und gemeinsam an der Realisierung arbeiten.
 
 
-Hotel Central e.V. ist ein gemeinnütziger Verein, der alle dazu einlädt, Teil unserer Vision und Idee zu werden.
+Hotel Central e.V. ist ein Verein, der alle dazu einlädt, Teil unserer Vision und Idee zu werden.
