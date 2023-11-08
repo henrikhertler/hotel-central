@@ -43,8 +43,10 @@ export default function FestivalPeople() {
         <div className='mt-16'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {people.map((peep, index) => (
-                    <div className={`flex justify-${index % 3 === 0 ? 'start' : index % 3 === 1 ? 'center' : 'end'}`}>
-                        <div key={peep.id} className='text-black bg-[#F5F5F5] w-[240px]'>
+                    <div
+                        key={peep.id}
+                        className={`flex justify-${index % 3 === 0 ? 'start' : index % 3 === 1 ? 'center' : 'end'}`}>
+                        <div className='text-black bg-[#F5F5F5] w-[240px]'>
                             <Image src={peep.image} alt={peep.name} width={240} height={240} />
                             <div className='p-4 py-6'>{peep.name}</div>
                         </div>
