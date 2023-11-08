@@ -4,38 +4,38 @@ export default function FestivalPeople() {
     const people = [
         {
             id: 1,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_01-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_01-02-min.jpg',
             name: 'Elias',
         },
         {
             id: 2,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_03-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_03-02-min.jpg',
             name: 'Yota',
         },
         {
             id: 3,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_04-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_04-02-min.jpg',
             name: 'Saeed',
         },
         {
             id: 4,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_06-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_06-02-min.jpg',
             name: 'Benny & Jakob',
         },
         {
             id: 5,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_02-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_02-02-min.jpg',
             name: 'Roman',
         },
         {
             id: 6,
-            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_05-02-min.jpeg',
+            image: '/festival/FHC_231025_SocialMedia_Workshops-Einzeln_1080x1080px_05-02-min.jpg',
             name: 'Melina',
         },
         {
             id: 7,
-            image: '/festival/fhc_231025_socialmedia_workshops-einzeln_1080x1080px_07-02-min.jpeg',
-            name: 'Roman Wagner',
+            image: '/festival/fhc_231025_socialmedia_workshops-einzeln_1080x1080px_07-02-min.jpg',
+            name: 'Jan Wagner',
         },
     ];
 

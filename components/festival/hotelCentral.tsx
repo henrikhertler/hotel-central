@@ -27,10 +27,10 @@ export default function HotelCentralFestival() {
                 , der{' '}
                 <Link target='_blank' href='https://www.instagram.com/initiativemusik/'>
                     Initiative Musik
-                </Link>
-                , dem Kulturamt Stuttgart und der{' '}
+                </Link>{' '}
+                und dem{' '}
                 <Link target='_blank' href='https://www.instagram.com/stuttgart.meine.stadt/'>
-                    Stadt Stuttgart
+                    Kulturamt der Stadt Stuttgart
                 </Link>
                 . Weitere Partner:innen:{' '}
                 <Link target='_blank' href='https://www.instagram.com/kessler_sekt/'>

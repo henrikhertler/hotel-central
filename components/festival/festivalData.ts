@@ -131,22 +131,7 @@ export const workshopData: WorkshopData = [
 
 export const marathonData: EventData = [
     {
-        day: 'Mittwoch 08.11.',
-        events: [
-            {
-                time: 'ab 20 Uhr',
-                pills: ['Studios'],
-                title: 'OPEN SESSION',
-                person: {
-                    name: 'für alle Musiker:innen, Produzent:innen & Songwriter:innen',
-                },
-                description:
-                    'Unsere Lobby Studios öffnen die Türen und laden zur OPEN SESSION ein! Im Rahmen unseres Festivals findet an zwei Tagen (08. & 10. November) eine Open Session statt. In den hauseigenen Musikstudios werden unter anderem <a target="_blank" href="https://www.instagram.com/diggidexter/">Dexter</a>, <a target="_blank" href="https://www.instagram.com/luzifersfinest/">Luzifersfinest</a>, <a target="_blank" href="https://www.instagram.com/elithesleepgod/">elithesleepgod</a>, <a target="_blank" href="https://www.instagram.com/svmred/">svmred</a>, <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a> und <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> zum gemeinsamen Musikmachen einladen. Die perfekte Gelegenheit sich mit anderen Musiker:innen zu vernetzen und gemeinsam kreativ zu sein. Interesse? <a target="_blank" href="https://www.instagram.com/p/CzT2pKhM7Zf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">Jetzt auf Instagram</a> bewerben!',
-            },
-        ],
-    },
-    {
-        day: 'Freitag 10.11.',
+        day: 'Mittwoch & Freitag 08.11. + 10.11.',
         events: [
             {
                 time: 'ab 20 Uhr',
@@ -164,13 +149,15 @@ export const marathonData: EventData = [
         day: 'Mittwoch 15.11.',
         events: [
             {
-                time: 'tba Uhr',
+                time: 'Einlass 19 Uhr',
                 pills: ['Talk'],
                 title: 'Runde: Förderstruktur für Musiker:innen',
-                description: 'tba',
+                description:
+                    'Gäst:innen:<br/>Christiane Müller (Initiative Musik)<br/>Katharina Löthe (Abteilung Kulturförderung beim Kulturamt der Stadt Stuttgart, Fachbereich Musik)<br/>Manuel Albani (Pop-Büro Region Stuttgart)',
                 person: {
                     name: '–',
                 },
+                price: 'kostenloser Eintritt!',
             },
         ],
     },
@@ -182,7 +169,7 @@ export const marathonData: EventData = [
                 pills: ['Talk', 'Magazin'],
                 title: 'Das Wetter-Runde',
                 description:
-                    'Wir präsentieren die „Das Wetter-Runde“ Gemeinsam mit unseren Freund*innen vom Pop-Büro begrüßen wir am 16. November Sascha Ehlert, Katharina Holzmann und Flawless Issues bei uns im Hotel Central. <a target="_blank" href="https://www.instagram.com/daswetteristimmer/">Sascha Ehlert</a> ist Gründer und Chefredaktor der Musikzeitschrift <a target="_blank" href="https://www.instagram.com/daswetteristimmer/">„Das Wetter – Magazin für Text und Musik“</a>, <a target="_blank" href="http://www.apple.com/de/">Katharina Holzmann</a> ist Redakteurin und Lektorin, <a target="_blank" href="https://www.instagram.com/flawlessissues777/">Flawless Issues</a> ist Musiker aus Stuttgart und zierte unter anderem das Coverbild der letzten Magazin-Ausgabe.<br/><br/>Passend zum 10-jährigen Jubiläum des Magazins widmen wir uns in der „Wetter-Runde“ gemeinsam der Welt der Musik und Texte. Wir sprechen über Popkultur, über die Musikbranche und über Kunst. Allem voran aber über die Entwicklungen innerhalb der Kreativ- und Musikberichterstattung in den vergangenen Jahren. Die Panel-Talk Runde wird moderiert von der Stuttgarter Journalistin <a target="_blank" href="https://www.instagram.com/fraugoldkette/">Laura Müller-Sixer</a>.<br/><br/>Zusätzlich wird es an diesem Abend im Rahmen der 10 Jahre Das Wetter - Tour das erste „Das Wetter - Buch für Text und Musik“ im 1.Stock zu kaufen geben.<br/><br/>Gäst:innen: Sascha Ehlert, Katharina Holzmann, Flawless Issues<br/>Moderation: Laura Müller-Sixer<br/><br/>Herzlichen Dank an das Pop-Büro, welches uns das Zusammentreffen aller Beteiligter überhaupt möglich gemacht hat!',
+                    'Wir präsentieren die „Das Wetter-Runde“ <br/> <br/>Gemeinsam mit unseren Freund*innen vom Pop-Büro begrüßen wir am 16. November Sascha Ehlert, Katharina Holzmann und Flawless Issues bei uns im Hotel Central. <a target="_blank" href="https://www.instagram.com/daswetteristimmer/">Sascha Ehlert</a> ist Gründer und Chefredaktor der Musikzeitschrift <a target="_blank" href="https://www.instagram.com/daswetteristimmer/">„Das Wetter – Magazin für Text und Musik“</a>, <a target="_blank" href="http://www.apple.com/de/">Katharina Holzmann</a> ist Redakteurin und Lektorin, <a target="_blank" href="https://www.instagram.com/flawlessissues777/">Flawless Issues</a> ist Musiker aus Stuttgart und zierte unter anderem das Coverbild der letzten Magazin-Ausgabe.<br/><br/>Passend zum 10-jährigen Jubiläum des Magazins widmen wir uns in der „Wetter-Runde“ gemeinsam der Welt der Musik und Texte. Wir sprechen über Popkultur, über die Musikbranche und über Kunst. Allem voran aber über die Entwicklungen innerhalb der Kreativ- und Musikberichterstattung in den vergangenen Jahren. Die Panel-Talk Runde wird moderiert von der Stuttgarter Journalistin <a target="_blank" href="https://www.instagram.com/fraugoldkette/">Laura Müller-Sixer</a>.<br/><br/>Zusätzlich wird es an diesem Abend im Rahmen der 10 Jahre Das Wetter - Tour das erste „Das Wetter - Buch für Text und Musik“ im 1.Stock zu kaufen geben.<br/><br/>Gäst:innen: Sascha Ehlert, Katharina Holzmann, Flawless Issues<br/>Moderation: Laura Müller-Sixer<br/><br/>Herzlichen Dank an das Pop-Büro, welches uns das Zusammentreffen aller Beteiligter überhaupt möglich gemacht hat!',
                 person: {
                     name: 'Musik ist immer!',
                 },
@@ -194,12 +181,12 @@ export const marathonData: EventData = [
         day: 'Freitag 17.11.',
         events: [
             {
-                time: '22 Uhr',
+                time: '21 Uhr',
                 pills: ['Konzert', 'Live', 'Dj-Sets'],
                 title: 'Hotel Central presents: Wellness Club',
                 description:
                     'Live: <a target="_blank" href="https://www.instagram.com/yevaluvyou/">YEVA</a>, <a target="_blank" href="https://www.instagram.com/elithesleepgod/">elithesleepgod</a>, <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> <br /> Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
-                price: 'Konzert: 10€ & Konzert + Club: 12€ <br /> Abendkasse only!',
+                price: 'Eintritt: 10€ <br /> Abendkasse only!',
             },
         ],
     },
@@ -207,7 +194,7 @@ export const marathonData: EventData = [
         day: 'Samstag 18.11.',
         events: [
             {
-                time: '22 Uhr',
+                time: '21 Uhr',
                 pills: ['Konzert', 'Dj-Sets'],
                 title: 'Hotel Central presents: Dexter & Gäste',
                 description:
