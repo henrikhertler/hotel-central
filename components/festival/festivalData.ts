@@ -134,14 +134,6 @@ export const marathonData = [
         day: 'Samstag 08.11.',
         workshops: [
             {
-                time: '22 Uhr',
-                pills: ['Konzert', 'Live', 'Special'],
-                title: 'Hotel Central presents: Dexter & Gäste',
-                description:
-                    'Gäste (Live + DJ): <a target="_blank" href="https://www.instagram.com/raedyraedy/">Raedy</a>, very special guest, <a target="_blank" href="https://www.instagram.com/keboo_o/">Keboo</a>, <a target="_blank" href="https://www.instagram.com/isaiah_otg/">Isaiah</a>, <a target="_blank" href="https://www.instagram.com/tereza_______________/">Tereza</a>, <a target="_blank" href="https://www.instagram.com/__gaisma__/">Gaisma</a>',
-                price: 'Konzert: 10€ & Konzert + Club: 15€ <br /> Abendkasse only!',
-            },
-            {
                 time: 'ab 20 Uhr',
                 pills: ['Studios'],
                 title: 'OPEN SESSION',
