@@ -1,4 +1,4 @@
-import { WorkshopData } from '../../types/workshopData';
+import { EventData, WorkshopData } from '../../types/workshopData';
 
 export const workshopData: WorkshopData = [
     {
@@ -129,10 +129,10 @@ export const workshopData: WorkshopData = [
     },
 ];
 
-export const marathonData = [
+export const marathonData: EventData = [
     {
         day: 'Samstag 08.11.',
-        workshops: [
+        events: [
             {
                 time: 'ab 20 Uhr',
                 pills: ['Studios'],
@@ -147,7 +147,7 @@ export const marathonData = [
     },
     {
         day: 'Samstag 10.11.',
-        workshops: [
+        events: [
             {
                 time: 'ab 20 Uhr',
                 pills: ['Studios'],
@@ -162,7 +162,7 @@ export const marathonData = [
     },
     {
         day: 'Freitag 16.11.',
-        workshops: [
+        events: [
             {
                 time: '19:30 Uhr',
                 pills: ['Talk', 'Magazin'],
@@ -178,7 +178,7 @@ export const marathonData = [
     },
     {
         day: 'Freitag 17.11.',
-        workshops: [
+        events: [
             {
                 time: '22 Uhr',
                 pills: ['Konzert', 'Live', 'Dj-Sets'],
@@ -191,7 +191,7 @@ export const marathonData = [
     },
     {
         day: 'Samstag 18.11.',
-        workshops: [
+        events: [
             {
                 time: '22 Uhr',
                 pills: ['Konzert', 'Dj-Sets'],
@@ -204,7 +204,7 @@ export const marathonData = [
     },
     {
         day: 'Sonntag 19.11.',
-        workshops: [
+        events: [
             {
                 time: '20 Uhr',
                 pills: ['Kino'],

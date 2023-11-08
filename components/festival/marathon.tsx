@@ -12,22 +12,22 @@ export default function Marathon() {
                         <div className='inline-block ml-10 py-1 pl-4 pr-20 text-2xl text-black festivalDay'>
                             {data.day}
                         </div>
-                        {data.workshops.map((workshop, index) => {
+                        {data.events.map((event, index) => {
                             return (
                                 <React.Fragment key={`marathon-event-${index}`}>
                                     {index >= 1 && <div className='border-b border-[#ffa3b5]' />}
                                     <Accordion
-                                        time={workshop.time}
-                                        title={workshop.title}
-                                        pills={workshop.pills}
-                                        subline={workshop.person?.name ?? ''}
+                                        time={event.time}
+                                        title={event.title}
+                                        pills={event.pills}
+                                        subline={event.person?.name ?? ''}
                                         content={
                                             <>
                                                 <div className='flex text-black flex-col md:flex-row'>
                                                     <div className='grow'>
                                                         <span
                                                             dangerouslySetInnerHTML={{
-                                                                __html: workshop.description,
+                                                                __html: event.description,
                                                             }}
                                                         />
                                                     </div>
@@ -35,7 +35,7 @@ export default function Marathon() {
                                                 <div className='text-black mt-2'>
                                                     <span
                                                         dangerouslySetInnerHTML={{
-                                                            __html: workshop.price ?? '',
+                                                            __html: event.price ?? '',
                                                         }}
                                                     />
                                                 </div>
