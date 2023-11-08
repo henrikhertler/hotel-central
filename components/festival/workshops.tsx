@@ -47,7 +47,9 @@ export default function Workshops() {
                                                         }}
                                                     />
                                                     <br />
-                                                    <Link href={workshop.registerHref}>Jetzt anmelden</Link>
+                                                    <Link target='_blank' href={workshop.registerHref}>
+                                                        Jetzt anmelden
+                                                    </Link>
                                                 </div>
                                             </div>
                                         }

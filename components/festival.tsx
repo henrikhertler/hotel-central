@@ -9,10 +9,13 @@ import Link from 'next/link';
 import { creatMouseSpinner, imageAroundMouse, triaAnimation, welcomeTextAnimation } from '../utility/animations';
 import Workshops from '@/components/festival/workshops';
 import Marathon from '@/components/festival/marathon';
+import HotelCentralFestival from '@/components/festival/hotelCentral';
+import FestivalPeople from '@/components/festival/festivalPeople';
 
 enum PROG_STATE {
     workshop = 'workshop',
     festival = 'festival',
+    hotel = 'hotel',
 }
 
 export default function FestivalComponent() {
@@ -119,20 +122,37 @@ export default function FestivalComponent() {
             </div>
 
             <div className='w-3/4 self-center'>
-                <div className='flex self-center bg-[#F5F5F5] text-[#ffa3b5] text-2xl cursor-pointer'>
+                <div className='flex flex-col md:flex-row self-center bg-[#F5F5F5] text-[#ffa3b5] text-2xl cursor-pointer'>
                     <div
                         onClick={() => setProgState(PROG_STATE.workshop)}
-                        className={`w-1/2 p-2 ${progState === PROG_STATE.workshop ? 'text-black bg-[#ffa3b5]' : ''}`}>
+                        className={`w-full md:w-1/2 p-2 ${
+                            progState === PROG_STATE.workshop ? 'text-black bg-[#ffa3b5]' : ''
+                        }`}>
                         Workshop Suite
                     </div>
                     <div
                         onClick={() => setProgState(PROG_STATE.festival)}
-                        className={`w-1/2 p-2 ${progState === PROG_STATE.festival ? 'text-black bg-[#ffa3b5]' : ''}`}>
+                        className={`w-full md:w-1/2 p-2 ${
+                            progState === PROG_STATE.festival ? 'text-black bg-[#ffa3b5]' : ''
+                        }`}>
                         Festival Marathon
                     </div>
+                    <div
+                        onClick={() => setProgState(PROG_STATE.hotel)}
+                        className={`w-full md:w-1/2 p-2 ${
+                            progState === PROG_STATE.hotel ? 'text-black bg-[#ffa3b5]' : ''
+                        }`}>
+                        Hotel Central
+                    </div>
                 </div>
-                {progState === PROG_STATE.workshop && <Workshops />}
+                {progState === PROG_STATE.workshop && (
+                    <>
+                        <Workshops />
+                        <FestivalPeople />
+                    </>
+                )}
                 {progState === PROG_STATE.festival && <Marathon />}
+                {progState === PROG_STATE.hotel && <HotelCentralFestival />}
             </div>
 
             <div className='flex justify-center pt-[220px] md:pt-[20px] pb-[100px]'>

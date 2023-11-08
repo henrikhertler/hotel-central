@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface AccordionProps {
     time: string;
@@ -11,16 +11,22 @@ interface AccordionProps {
 
 export const Accordion: React.FC<AccordionProps> = ({ time, title, pills, subline, content }) => {
     const [active, setActive] = useState(false);
-    const [height, setHeight] = useState('0px');
+    const [height, setHeight] = useState('100%');
     const [rotate, setRotate] = useState('transform duration-700 ease');
 
-    const contentSpace = useRef(null);
+    const contentSpace = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (contentSpace.current) {
+            setHeight(`${contentSpace.current.scrollHeight}px`);
+        }
+    }, [contentSpace.current]);
 
     function toggleAccordion() {
         setActive((prevState) => !prevState);
         // @ts-ignore
-        setHeight(active ? '0px' : `${contentSpace.current.scrollHeight}px`);
-        setRotate(active ? 'transform duration-700 ease' : 'transform duration-700 ease rotate-180');
+        setHeight(active ? `${contentSpace.current.scrollHeight}px` : '0px');
+        setRotate(active ? 'transform duration-700 ease' : 'transform duration-700 ease rotate-0');
     }
 
     return (
@@ -49,7 +55,7 @@ export const Accordion: React.FC<AccordionProps> = ({ time, title, pills, sublin
                     </div>
                     <div
                         onClick={toggleAccordion}
-                        className={`mt-4 md:mt-0 cursor-pointer bg-[#ffa3b5] rounded-full inline-block ${rotate}`}>
+                        className={`mt-4 md:mt-0 cursor-pointer bg-[#ffa3b5] rounded-full inline-block rotate-180 ${rotate}`}>
                         <svg
                             className='fill-current text-white'
                             xmlns='http://www.w3.org/2000/svg'
