@@ -184,7 +184,7 @@ export const marathonData: EventData = [
                 pills: ['Konzert', 'Live', 'Dj-Sets'],
                 title: '1.Stock x Wellness Club',
                 description:
-                    'Der 1.Stock öffnet für das Festival Hotel Central nach langer Zeit seine Türen & begrüßt am Freitag, 17. November, sechs lokale Musiker*innen.<br/><br/>Live: <a target="_blank" href="https://www.instagram.com/yevaluvyou/">YEVA</a>, <a target="_blank" href="https://www.instagram.com/elithesleepgod/">elithesleepgod</a>, <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> <br /> Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
+                    'Der 1.Stock öffnet für das Festival Hotel Central nach langer Zeit seine Türen & begrüßt am Freitag, 17. November, sechs lokale Musiker*innen.<br/><br/>Live: <a target="_blank" href="https://www.instagram.com/yevaluvyou/">YEVA</a>, <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> <br /> Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
                 person: {
                     name: 'Clubshow und Live-Sets',
                 },
