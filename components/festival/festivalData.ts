@@ -149,15 +149,14 @@ export const marathonData: EventData = [
         day: 'Mittwoch 15.11.',
         events: [
             {
-                time: 'Einlass 19 Uhr',
+                time: '19 Uhr',
                 pills: ['Talk'],
-                title: 'Runde: Förderstruktur für Musiker:innen',
+                title: 'Paneltalk („Runde“)',
                 description:
-                    'Gäst:innen:<br/>Christiane Müller (Initiative Musik)<br/>Katharina Löthe (Abteilung Kulturförderung beim Kulturamt der Stadt Stuttgart, Fachbereich Musik)<br/>Manuel Albani (Pop-Büro Region Stuttgart)',
+                    'Nicht immer muss das Thema „Förderung“ unerreichbar klingen - im Gegenteil! Gerade für Musiker*innen gibt es eine Vielzahl an Möglichkeiten. Unsere Gäst*innen Christiane Müller (<a target="_blank" href="https://www.instagram.com/initiativemusik/">Initiative Musik</a>), Katharina Löthe (<a target="_blank" href="https://www.instagram.com/stuttgart.meine.stadt/">Kulturamt der Stadt Stuttgart</a>) und Manuel Albani (<a target="_blank" href="https://www.instagram.com/popbuero/">Pop-Büro Region Stuttgart</a>) kennen die verschiedenen nationalen und städtischen Fördermöglichkeiten für Musiker*innen und sprechen in der kommenden „Runde“, nächsten Mittwoch am 15. November, mit uns darüber.<br/><br/>Eintritt: kostenfrei!<br/>Beginn: 19 Uhr <br/>Location: 1.Stock <br/><br/>Wir freuen uns über einen gemeinsamen Austausch und über Fragen und Anregungen.',
                 person: {
-                    name: '–',
+                    name: 'Thema: Vorstellung verschiedener nationaler und städtischer Fördermöglichkeiten für Musiker:innen',
                 },
-                price: 'kostenloser Eintritt!',
             },
         ],
     },
@@ -183,9 +182,12 @@ export const marathonData: EventData = [
             {
                 time: '21 Uhr',
                 pills: ['Konzert', 'Live', 'Dj-Sets'],
-                title: 'Hotel Central presents: Wellness Club',
+                title: '1.Stock x Wellness Club',
                 description:
-                    'Live: <a target="_blank" href="https://www.instagram.com/yevaluvyou/">YEVA</a>, <a target="_blank" href="https://www.instagram.com/elithesleepgod/">elithesleepgod</a>, <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> <br /> Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
+                    'Der 1.Stock öffnet für das Festival Hotel Central nach langer Zeit seine Türen & begrüßt am Freitag, 17. November, sechs lokale Musiker*innen.<br/><br/>Live: <a target="_blank" href="https://www.instagram.com/yevaluvyou/">YEVA</a>, <a target="_blank" href="https://www.instagram.com/elithesleepgod/">elithesleepgod</a>, <a target="_blank" href="https://www.instagram.com/jcoup_/">Jcoup</a> <br /> Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
+                person: {
+                    name: 'Clubshow und Live-Sets',
+                },
                 price: 'Eintritt: 10€ <br /> Abendkasse only!',
             },
         ],
@@ -196,9 +198,12 @@ export const marathonData: EventData = [
             {
                 time: '21 Uhr',
                 pills: ['Konzert', 'Dj-Sets'],
-                title: 'Hotel Central presents: Dexter & Gäste',
+                title: 'Dexter & Gäste',
                 description:
-                    'Gäste (Live + DJ): <a target="_blank" href="https://www.instagram.com/raedyraedy/">Raedy</a>, very special guest, <a target="_blank" href="https://www.instagram.com/keboo_o/">Keboo</a>, <a target="_blank" href="https://www.instagram.com/isaiah_otg/">Isaiah</a>, <a target="_blank" href="https://www.instagram.com/tereza_______________/">Tereza</a>, <a target="_blank" href="https://www.instagram.com/__gaisma__/">Gaisma</a>',
+                    'Check-Check! <a target="_blank" href="https://www.instagram.com/diggidexter/">Dexter</a> hat ins Hotel Central eingecheckt, mehrere Gäste mitgebracht & die Präsidenten-Suite gebucht. Am Samstag, 18. November, besuchen sie gemeinsam den <a target="_blank" href="https://www.instagram.com/1.stock/">1.Stock</a>.<br/><br/>Gäste (Live + DJ): <a target="_blank" href="https://www.instagram.com/raedyraedy/">Raedy</a>, very special guest, <a target="_blank" href="https://www.instagram.com/keboo_o/">Keboo</a>, <a target="_blank" href="https://www.instagram.com/isaiah_otg/">Isaiah</a>, <a target="_blank" href="https://www.instagram.com/tereza_______________/">Tereza</a>, <a target="_blank" href="https://www.instagram.com/__gaisma__/">Gaisma</a>',
+                person: {
+                    name: 'Clubshow und Live-Sets',
+                },
                 price: 'Konzert: 10€, Konzert + Club: 15€, Club: 8€ <br /> Abendkasse only!',
             },
         ],
@@ -215,7 +220,6 @@ export const marathonData: EventData = [
                 person: {
                     name: 'Kino-Night: TAXI DRIVER',
                 },
-                price: '<a target="_blank" href="https://arthaus-kino.de/filme/sonderprogramm/">Jetzt Tickets sichern</a>',
             },
         ],
     },

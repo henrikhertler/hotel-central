@@ -44,8 +44,8 @@ export const Accordion: React.FC<AccordionProps> = ({ time, title, pills, sublin
                                 );
                             })}
                         </div>
-                        <p className='inline-block text-black'>{title}</p>
-                        <p className='inline-block text-black text-xs'>
+                        <p className='inline-block text-black text-[1.2rem]'>{title}</p>
+                        <p className='inline-block text-black text-xs text-[0.9rem]'>
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: subline,
