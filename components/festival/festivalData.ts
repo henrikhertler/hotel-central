@@ -180,13 +180,13 @@ export const marathonData: EventData = [
         day: 'Freitag 17.11.',
         events: [
             {
-                time: '21 Uhr',
+                time: '22 Uhr',
                 pills: ['Dj-Sets'],
                 title: '1.Stock x Wellness Club',
                 description:
                     'Der 1.Stock öffnet für das Festival Hotel Central nach langer Zeit seine Türen & begrüßt am Freitag, 17. November, drei lokale DJs.<br/><br/>Dj-Sets: <a target="_blank" href="https://www.instagram.com/immibakes/">Immi Bakes</a> , <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> , <a target="_blank" href="https://www.instagram.com/duperyota/">Yota</a>',
                 person: {
-                    name: 'Clubshow und Live-Sets',
+                    name: 'Live-Sets',
                 },
                 price: 'Eintritt: 6€ <br /> Abendkasse only!',
             },
