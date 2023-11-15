@@ -164,6 +164,14 @@ export const marathonData: EventData = [
         day: 'Donnerstag 16.11.',
         events: [
             {
+                time: '19:00 Uhr',
+                pills: ['Radio'],
+                title: 'Festival Hotel Central B2B Special',
+                description:
+                    'Als wichtiger Bestandteil unseres Hotel Central Programms hat sich das <a target="_blank" href="https://www.instagram.com/lobby_radio/">Lobby Radio</a> im <a target="_blank" href="https://www.instagram.com/transit_bergamo_detroit/">Transit/Bergamo</a> inzwischen zu einem wöchentlichen Treffpunkt für Musikliebhaber:innen etabliert. Zur Feier unseres einjährigen Geburtstag wird es am Donnerstag, den 16. November ein exklusives B2B Special geben. Wir freuen uns auf:<br /><br /><a target="_blank" href="https://www.instagram.com/maximilian.haslauer/">MaxTM</a> b2b <a target="_blank" href="https://www.instagram.com/el.bebbe.grande/">Kool DJ Bebbe</a><br/><a target="_blank" href="https://www.instagram.com/tenisa_online/">Tenisa</a> b2b <a target="_blank" href="https://www.instagram.com/fraiser_org/">Fraiser</a> (Not so easy_org)<br/><a target="_blank" href="https://www.instagram.com/amelieemaria">Amelie</a> b2b <a target="_blank" href="https://www.instagram.com/sophiagrabe">Sophia</a> (Kulle)<br /><br /><a target="_blank" href="https://www.instagram.com/mittone__/">Mittone</a> b2b <a target="_blank" href="https://www.instagram.com/____jk____loveitrecords/">JK</a> — AFTER HOUR LOBBY RADIO',
+                price: 'Der Eintritt ist kostenlos.',
+            },
+            {
                 time: '19:30 Uhr',
                 pills: ['Talk', 'Magazin'],
                 title: 'Das Wetter-Runde',

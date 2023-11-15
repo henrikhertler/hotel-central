@@ -28,11 +28,15 @@ export default function HotelCentralFestival() {
                 <Link target='_blank' href='https://www.instagram.com/initiativemusik/'>
                     Initiative Musik
                 </Link>{' '}
-                und dem{' '}
+                und dem Kulturamt der{' '}
                 <Link target='_blank' href='https://www.instagram.com/stuttgart.meine.stadt/'>
-                    Kulturamt der Stadt Stuttgart
+                    Stadt Stuttgart
                 </Link>
                 . Weitere Partner:innen:{' '}
+                <Link target='_blank' href='https://www.instagram.com/wetteristimmer/'>
+                    Das Wetter Magazin
+                </Link>
+                ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/kessler_sekt/'>
                     Kessler
                 </Link>
@@ -50,11 +54,19 @@ export default function HotelCentralFestival() {
                 </Link>
                 ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/lemonaid.charitea/'>
-                    Charitea
+                    Lemonaid & Charitea
                 </Link>
                 ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/doen.doen.kebap/'>
-                    Doendoen
+                    doen doen ® kebap
+                </Link>
+                ,{' '}
+                <Link target='_blank' href='https://www.instagram.com/wilhelmkern1903'>
+                    Wilhelm Kern
+                </Link>
+                ,{' '}
+                <Link target='_blank' href='https://www.instagram.com/schweppes_de'>
+                    Schweppes
                 </Link>
                 ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/beyerdynamic/'>
@@ -62,7 +74,7 @@ export default function HotelCentralFestival() {
                 </Link>
                 ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/arthausfilmtheaterstuttgart/'>
-                    Arthaus Kino
+                    Arthaus Filmtheater Stuttgart
                 </Link>
                 ,{' '}
                 <Link target='_blank' href='https://www.instagram.com/1.stock/'>
@@ -73,12 +85,12 @@ export default function HotelCentralFestival() {
                     Studio Tillack Knöll
                 </Link>
                 ,{' '}
-                <Link target='_blank' href='https://www.instagram.com/wetteristimmer/'>
-                    Das Wetter Magazin
+                <Link target='_blank' href='https://www.instagram.com/transit_bergamo_detroit/'>
+                    Transit/Bergamo & Detroit Bar
                 </Link>
                 ,{' '}
-                <Link target='_blank' href='https://www.instagram.com/transit_bergamo_detroit/'>
-                    Transit/ Bergamo
+                <Link target='_blank' href='https://www.instagram.com/roomservice.eu'>
+                    Roomservice Europe GmbH
                 </Link>
             </div>
         </div>
