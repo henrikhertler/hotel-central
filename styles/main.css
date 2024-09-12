@@ -3,208 +3,223 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Gerstner-Programm-Bold;
-    src: url('/fonts/Gerstner-ProgrammBold.otf') format('opentype'),
-    url('/fonts/Gerstner-ProgrammBold.woff') format('woff'),
-    url('/fonts/Gerstner-ProgrammBold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: Gerstner-Programm-Bold;
+	src:
+		url('/fonts/Gerstner-ProgrammBold.otf') format('opentype'),
+		url('/fonts/Gerstner-ProgrammBold.woff') format('woff'),
+		url('/fonts/Gerstner-ProgrammBold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: Gerstner-Programm-Bold-Italic;
-    src: url('/fonts/Gerstner-ProgrammBoldItalic.otf') format('opentype'),
-    url('/fonts/Gerstner-ProgrammBoldItalic.woff') format('woff'),
-    url('/fonts/Gerstner-ProgrammBoldItalic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: Gerstner-Programm-Bold-Italic;
+	src:
+		url('/fonts/Gerstner-ProgrammBoldItalic.otf') format('opentype'),
+		url('/fonts/Gerstner-ProgrammBoldItalic.woff') format('woff'),
+		url('/fonts/Gerstner-ProgrammBoldItalic.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
 :root {
-    --rosa: #ffa3b5;
-    --rosaRGB: 255, 163, 181;
-    --violet: #6756e0;
-    --violetRGB: 103, 86, 224;
+	--rosa: #ffa3b5;
+	--rosaRGB: 255, 163, 181;
+	--violet: #6756e0;
+	--violetRGB: 103, 86, 224;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 *:focus {
-    @apply outline-none ring-2 ring-pink-500 ring-opacity-50;
+	@apply outline-none ring-2 ring-pink-500 ring-opacity-50;
 }
 
 html {
-    height: 100%;
-    box-sizing: border-box;
-    touch-action: manipulation;
-    font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+	height: 100%;
+	box-sizing: border-box;
+	touch-action: manipulation;
+	font-feature-settings:
+		'case' 1,
+		'rlig' 1,
+		'calt' 0;
 }
 
 html,
 body {
-    font-family: Gerstner-Programm-Bold, -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
-    'Helvetica', sans-serif;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    @apply text-white antialiased;
+	font-family:
+		Gerstner-Programm-Bold,
+		-apple-system,
+		system-ui,
+		BlinkMacSystemFont,
+		'Helvetica Neue',
+		'Helvetica',
+		sans-serif;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	@apply text-white antialiased;
 }
 
 body#root {
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    background-color: #FBE5E9;
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+	background-color: #fbe5e9;
 }
 
 #frontpage {
-    background-image: url('/background_1x-min.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+	background-image: url('/background_1x-min.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 
-    & .animated {
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
+	& .animated {
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    #frontpage {
-        background-image: url('/background_2x-min.jpg');
-    }
+	#frontpage {
+		background-image: url('/background_2x-min.jpg');
+	}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    #frontpage {
-        background-image: url('/background_3x-min.jpg');
-    }
+	#frontpage {
+		background-image: url('/background_3x-min.jpg');
+	}
 }
 
 a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .height-screen-helper {
-    height: calc(100vh - 80px);
+	height: calc(100vh - 80px);
 }
 
 #festival {
-    position: relative;
-    overflow-x: hidden;
-    background-image: url('/violet-bg.png');
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-    padding-top: 100px;
+	position: relative;
+	overflow-x: hidden;
+	background-image: url('/violet-bg.png');
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+	padding-top: 100px;
 
-    .triangle {
-        position: absolute;
-        background-image: linear-gradient(rgba(var(--violetRGB), 0.7), rgba(var(--violetRGB), 0.3), rgba(255,255,255, 0));
-        clip-path: polygon(50% 0, 100% 100%, 0 100%);
-        height: 300px;
-        opacity: 1;
-    }
+	.triangle {
+		position: absolute;
+		background-image: linear-gradient(
+			rgba(var(--violetRGB), 0.7),
+			rgba(var(--violetRGB), 0.3),
+			rgba(255, 255, 255, 0)
+		);
+		clip-path: polygon(50% 0, 100% 100%, 0 100%);
+		height: 300px;
+		opacity: 1;
+	}
 
-    .smiley {
-        position: absolute;
-        width: 250px;
-        z-index: 99;
+	.smiley {
+		position: absolute;
+		width: 250px;
+		z-index: 99;
 
-        & svg {
-            color: var(--violet);
-        }
-    }
+		& svg {
+			color: var(--violet);
+		}
+	}
 
-    .big-text {
-        & .text {
-            display: inline-block;
-            background-color: var(--rosa);
-            padding: 0 0.5rem;
-            border-left: 6px solid #FFFFFF;
+	.big-text {
+		& .text {
+			display: inline-block;
+			background-color: var(--rosa);
+			padding: 0 0.5rem;
+			border-left: 6px solid #ffffff;
 
-            & p {
-                color: transparent;
-            }
+			& p {
+				color: transparent;
+			}
 
-            &:first-child {
-                border-left: 0;
-                border-right: 4px solid var(--violet);
-            }
+			&:first-child {
+				border-left: 0;
+				border-right: 4px solid var(--violet);
+			}
 
-            &:last-child {
-                border-left: 0;
-                border-right: 4px solid var(--violet);
-                border-bottom: 4px solid var(--violet);
-            }
-        }
-    }
+			&:last-child {
+				border-left: 0;
+				border-right: 4px solid var(--violet);
+				border-bottom: 4px solid var(--violet);
+			}
+		}
+	}
 
-    .description {
-        & span {
-            background-color: var(--rosa);
-        }
+	.description {
+		& span {
+			background-color: var(--rosa);
+		}
 
-        & .location {
-            color: var(--violet);
-            font-size: 1.2rem;
+		& .location {
+			color: var(--violet);
+			font-size: 1.2rem;
 
-            & span {
-                padding-left: 20px;
-            }
-        }
+			& span {
+				padding-left: 20px;
+			}
+		}
 
-        & .info {
-            display: inline-block;
-            margin-left: 30px;
-            font-size: 2.5rem;
-            line-height: 2.2rem;
+		& .info {
+			display: inline-block;
+			margin-left: 30px;
+			font-size: 2.5rem;
+			line-height: 2.2rem;
 
-            & span {
-                display: inline-block;
-            }
-        }
-    }
+			& span {
+				display: inline-block;
+			}
+		}
+	}
 
-    .date {
-        position: absolute;
-        top: calc(100vh - 55px);
-        right: 0;
+	.date {
+		position: absolute;
+		top: calc(100vh - 55px);
+		right: 0;
 
-        & span:first-child {
-            padding: 0 0.5rem;
-            background-color: rgba(var(--rosaRGB), 0.6);
-        }
+		& span:first-child {
+			padding: 0 0.5rem;
+			background-color: rgba(var(--rosaRGB), 0.6);
+		}
 
-        & span:last-child {
-            display: inline-block;
-            font-size: 1.2rem;
-            padding: 0 1rem 0 0.5rem;
-            background-color: var(--rosa);
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
-        }
-    }
+		& span:last-child {
+			display: inline-block;
+			font-size: 1.2rem;
+			padding: 0 1rem 0 0.5rem;
+			background-color: var(--rosa);
+			border-left: 4px solid white;
+			border-bottom: 4px solid white;
+		}
+	}
 
-    .festivalDay {
-        background-color: var(--rosa);
-    }
+	.festivalDay {
+		background-color: var(--rosa);
+	}
 
-    .pill {
-        background-color: #FFFFFF;
-        color: var(--rosa);
-        border: 1px solid var(--rosa);
-        border-radius: 15px;
-    }
+	.pill {
+		background-color: #ffffff;
+		color: var(--rosa);
+		border: 1px solid var(--rosa);
+		border-radius: 15px;
+	}
 
-    & a {
-        text-decoration: underline;
-    }
+	& a {
+		text-decoration: underline;
+	}
 }

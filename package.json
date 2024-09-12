@@ -1,42 +1,44 @@
 {
-  "name": "hotel-central",
-  "version": "0.1.3",
-  "license": "MIT",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "gsap": "^3.12.2",
-    "next": "^13.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.3"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.7",
-    "@types/react": "^18.2.31",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
-  },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "tabWidth": 4,
-    "semi": true,
-    "printWidth": 120,
-    "quoteProps": "as-needed",
-    "bracketSpacing": true,
-    "jsxSingleQuote": true,
-    "bracketSameLine": true,
-    "endOfLine": "auto",
-    "arrowParens": "always",
-    "htmlWhitespaceSensitivity": "css",
-    "embeddedLanguageFormatting": "auto",
-    "singleAttributePerLine": false
-  }
+	"name": "hotel-central",
+	"version": "0.1.3",
+	"license": "MIT",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"type-check": "tsc",
+		"pretty": "yarn prettier --write ."
+	},
+	"dependencies": {
+		"@portabletext/react": "^3.1.0",
+		"gsap": "^3.12.2",
+		"next": "^13.5.6",
+		"next-sanity": "^9.4.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"sanity": "^3.57.2",
+		"styled-components": "^6.1.13",
+		"tailwindcss": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.8.7",
+		"@types/react": "^18.2.31",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.31",
+		"prettier": "^3.0.3",
+		"typescript": "^5.2.2"
+	},
+	"prettier": {
+		"useTabs": true,
+		"tabWidth": 4,
+		"singleQuote": true,
+		"quoteProps": "as-needed",
+		"jsxSingleQuote": true,
+		"bracketSameLine": true,
+		"printWidth": 120,
+		"endOfLine": "auto",
+		"semi": true,
+		"bracketSpacing": true,
+		"arrowParens": "avoid"
+	}
 }
