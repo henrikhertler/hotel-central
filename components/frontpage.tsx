@@ -3,161 +3,122 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import SupporterLogos from '@/components/supporterLogos';
+import { PageContent } from '../types/pageContent';
+import { defineQuery } from 'groq';
+import { client, sanityOptions } from '../sanity/client';
+import { PortableText, PortableTextComponents } from '@portabletext/react';
+import { EventContent } from '../types/eventContent';
+import EventItem from '@/components/eventItem';
+import Image from 'next/image';
+
+const components: PortableTextComponents = {
+	block: {
+		normal: ({ children }) => <p>{children}</p>,
+	},
+};
 
 export default function Frontpage() {
-    const [small, setSmall] = useState(false);
+	const [small, setSmall] = useState(false);
+	const [content, setContent] = useState<PageContent | undefined>(undefined);
+	const [events, setEvents] = useState<EventContent[] | undefined>(undefined);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', () => setSmall(window.scrollY > 32));
-        }
-    }, []);
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.addEventListener('scroll', () => setSmall(window.scrollY > 32));
+		}
+		void getContent();
+		void getEvents();
 
-    return (
-        <section id='frontpage' className='flex flex-col content-center'>
-            <div
-                className={`flex mt-4 justify-center text-black self-center ${
-                    small ? 'md:w-1/5 w-1/2' : ' md:w-1/3 w-1/2'
-                } fixed z-0 ease-in-out duration-300`}>
-                <img src='/wordmark-round.svg' alt='Hotel Central Logo' className='inline-block' />
-            </div>
+		return () => {
+			if (typeof window !== 'undefined') {
+				window.removeEventListener('scroll', () => setSmall(window.scrollY > 32));
+			}
+		};
+	}, []);
 
-            <div className='flex flex-col self-center p-6 bg-white content-center text-black text-center rounded md:mt-56 mt-40 md:max-w-md w-10/12 z-10'>
-                <p className='uppercase tracking-wider mb-4'>PUBLIC ANNOUNCEMENT</p>
-                <p>
-                    Das „Hotel Central“ ist ein digitaler und realer Ort mit dem Ziel, kreative Persönlichkeiten
-                    unterschiedlicher Disziplinen zu vernetzen und in ihrer Entwicklung zu unterstützen. Unseren Gästen
-                    stellen wir Räumlichkeiten, Ausstattung sowie Veranstaltungs- und Netzwerkplattformen zur Verfügung,
-                    um ihr kreatives Arbeiten zu unterstützen. Wir heißen in unserem imaginären Hotel die
-                    unterschiedlichsten Menschen aus allen denkbaren, kreativen Bereichen willkommen. Gemeinsam
-                    verbringen sie Zeit in unserem Haus, diskutieren ihre Ideen, arbeiten an interdisziplinären
-                    Projekten mit Bezug zu Musik, Kunst, Fotografie, Design und Kultur und schaffen kreativen Output mit
-                    nachhaltigem und relevanten Stellenwert.
-                    <br />
-                    <br />
-                    JEDER GAST BRINGT SEINE GESCHICHTE UND SEIN TALENT MIT. SO ENTSTEHEN NEUE ETAGEN UND DAS HOTEL
-                    CENTRAL ERWACHT ZUM LEBEN.
-                    <br />
-                    <br />
-                    Der Austausch zwischen bekannten Professionals und jungen, aufstrebenden Kreativen ist ein wichtiger
-                    Bestandteil unserer Idee. Hierbei greifen wir auf unsere langjährige Erfahrung und Kenntnisse über
-                    die ansässige Subkultur zurück und bringen etablierte Protagonist:innen mit jungen Talenten
-                    zusammen. Wir glauben nicht nur daran, dass kreative Projekte besser werden, wenn verschiedene
-                    Menschen mit unterschiedlichem Background daran arbeiten. Wir glauben auch daran, dass die Welt eine
-                    bessere ist, wenn sich Menschen gegenseitig inspirieren, unterstützen und gemeinsam an der
-                    Realisierung arbeiten.
-                    <br />
-                    <br />
-                    <br />
-                    Hotel Central e.V. ist ein Verein, der alle dazu einlädt, Teil unserer Vision und Idee zu werden.
-                </p>
-            </div>
+	const getContent = async () => {
+		const CONTENT_QUERY = defineQuery(`*[_type == 'page' && name == 'Frontpage'][0]{headline, content}`);
+		setContent(await client.fetch<PageContent>(CONTENT_QUERY, {}, sanityOptions));
+	};
 
-            <div className='flex md:flex-row flex-col md:items-start items-center justify-between md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div>
-                    <div className='bg-white text-black rounded p-6 px-8 text-center'>
-                        <p className='uppercase tracking-wider mb-4'>Folge uns</p>
-                        <a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
-                            @hotel__central
-                        </a>
-                    </div>
-                    <div className='bg-white text-black rounded p-6 px-8 text-center mt-20'>
-                        <p className='uppercase tracking-wider mb-4'>Werde Mitglied!</p>
-                        <a className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
-                            Download Antrag
-                        </a>
-                    </div>
-                </div>
-                <Link href='/festival'>
-                    <div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[#ffa3b5]'>
-                        <p className='pt-3 uppercase tracking-wider mb-4'>
-                            Hotel Central
-                            <br />
-                            Festival
-                        </p>
-                    </div>
-                </Link>
-            </div>
+	const getEvents = async () => {
+		const EVENT_QUERY = defineQuery(`*[_type == 'event'] | order(date desc) {date, name, location}`);
+		setEvents(await client.fetch<EventContent[]>(EVENT_QUERY, {}, sanityOptions));
+	};
 
-            <div className='flex md:flex-row flex-col items-center justify-end md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <a href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
-                    <div className='flex flex-col items-center bg-black text-white md:mt-8 mt-40 rounded p-6 px-12 text-center mr-14'>
-                        <p className='uppercase tracking-wider mb-4'>
-                            Folge unserem <br /> lobby radio
-                        </p>
-                        <img src={'/icon__lobby--radio.svg'} alt={'lobby radio'} width='100px' />
-                    </div>
-                </a>
-            </div>
+	return (
+		<section id='frontpage' className='flex flex-col content-center'>
+			<div
+				className={`flex mt-4 justify-center text-black self-center ${
+					small ? 'md:w-1/5 w-1/2' : ' md:w-1/3 w-1/2'
+				} fixed z-0 ease-in-out duration-300 max-w-xl`}>
+				<Link href={'/'}>
+					<Image
+						src='/wordmark-round.svg'
+						width={483}
+						height={207}
+						alt='Hotel Central Logo'
+						className='inline-block'
+						unoptimized
+					/>
+				</Link>
+			</div>
 
-            <div className='flex md:flex-row flex-col items-center justify-start md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12 break-words'>
-                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
-                    <p>19. Juli | 19 Uhr</p>
-                    <p className='text-3xl'>
-                        Wie geht …
-                        <br />
-                        Kulturelle
-                        <br />
-                        Zwischennutzung
-                    </p>
-                    <p className='mt-1'>1. März | Steinstr. 13</p>
-                </div>
-            </div>
+			<div className='z-10 mt-40 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-56 md:max-w-md'>
+				<p className='mb-4 uppercase tracking-wider'>{content?.headline}</p>
+				{content && <PortableText value={content.content} components={components} />}
+			</div>
 
-            <div className='flex md:flex-row flex-col items-center justify-end md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-12 text-center md:w-5/12 mr-14'>
-                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
-                    <p>27. April | 19 Uhr</p>
-                    <p className='text-3xl'>
-                        Panel Talk:
-                        <br />
-                        Frauen* in
-                        <br />
-                        der Musik
-                    </p>
-                    <p className='mt-1'>1. März | Steinstr. 13</p>
-                </div>
-            </div>
+			<div className='z-10 mt-40 flex w-10/12 flex-col items-center justify-between self-center md:mt-16 md:w-1/2 md:flex-row md:items-start'>
+				<div>
+					<div className='rounded bg-white p-6 px-8 text-center text-black'>
+						<p className='mb-4 uppercase tracking-wider'>Folge uns</p>
+						<a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
+							@hotel__central
+						</a>
+					</div>
+					<div className='mt-20 rounded bg-white p-6 px-8 text-center text-black'>
+						<p className='mb-4 uppercase tracking-wider'>Werde Mitglied!</p>
+						<a className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
+							Download Antrag
+						</a>
+					</div>
+				</div>
+				<Link href='/festival'>
+					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[#ffa3b5]'>
+						<p className='mb-4 pt-3 uppercase tracking-wider'>
+							Hotel Central
+							<br />
+							Festival
+						</p>
+					</div>
+				</Link>
+			</div>
 
-            <div className='flex md:flex-row flex-col md:items-start items-center justify-between md:mt-16 mt-40 self-center md:w-1/2 w-10/12 z-10'>
-                <div className='bg-white text-black md:mt-8 mt-40 rounded p-6 px-8 text-center md:w-5/12'>
-                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
-                    <p>29. März bis 16. Mai</p>
-                    <p className='text-3xl'>
-                        Workshop
-                        <br />
-                        Suite
-                        <br />
-                        Pt. 1
-                    </p>
-                    <p className='mt-1'>1. März | Steinstr. 13</p>
-                </div>
-                <div className='bg-white text-black mt-56 rounded p-6 px-8 text-center md:w-5/12'>
-                    <p className='uppercase tracking-wider mb-4'>Past Events</p>
-                    <p>01. März | 19 Uhr</p>
-                    <p className='text-3xl'>
-                        Hotel-Central:
-                        <br />
-                        Check-In
-                        <br />
-                        with
-                        <br />
-                        Surprise Guests
-                    </p>
-                    <p className='mt-1'>1. März | Steinstr. 13</p>
-                </div>
-            </div>
+			<div className='z-10 mt-40 flex w-10/12 flex-col items-center justify-end self-center md:mt-16 md:w-1/2 md:flex-row'>
+				<a href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
+					<div className='mt-40 mr-14 flex flex-col items-center rounded bg-black p-6 px-12 text-center text-white md:mt-8'>
+						<p className='mb-4 uppercase tracking-wider'>
+							Folge unserem <br /> lobby radio
+						</p>
+						<img src={'/icon__lobby--radio.svg'} alt={'lobby radio'} width='100px' />
+					</div>
+				</a>
+			</div>
 
-            <div className='self-center md:w-1/6 w-1/2 mt-60 mb-60 z-10'>
-                <img src='/icon-smiley.svg' alt='Smileys Logo' className='inline-block' />
-            </div>
+			{events?.map(({ date, name, location }, index) => (
+				<EventItem key={name} index={index} date={date} name={name} location={location} />
+			))}
 
-            <SupporterLogos />
+			<div className='z-10 mt-60 mb-60 w-1/2 self-center md:w-1/6'>
+				<img src='/icon-smiley.svg' alt='Smileys Logo' className='inline-block' />
+			</div>
 
-            <div className='self-center mt-60 text-black mb-12 z-10'>
-                <Link href={'/impressum'}>Impressum</Link>
-            </div>
-        </section>
-    );
+			<SupporterLogos />
+
+			<div className='z-10 mt-60 mb-12 self-center text-black'>
+				<Link href={'/impressum'}>Impressum</Link>
+			</div>
+		</section>
+	);
 }
