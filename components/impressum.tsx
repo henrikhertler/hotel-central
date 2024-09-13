@@ -31,7 +31,7 @@ export default function Imprint() {
 	}, []);
 
 	const getContent = async () => {
-		const CONTENT_QUERY = defineQuery(`*[_type == 'page' && name == 'Impressum'][0]{name, content}`);
+		const CONTENT_QUERY = defineQuery(`*[_type == 'page' && name == 'Impressum'][0]{headline, content}`);
 		setContent(await client.fetch<PageContent>(CONTENT_QUERY, {}, sanityOptions));
 	};
 
