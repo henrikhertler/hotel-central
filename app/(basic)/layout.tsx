@@ -1,6 +1,7 @@
 import '@/styles/main.css';
 import '@/styles/chrome-bug.css';
 import { ReactNode } from 'react';
+import Navigation from '../../components/navigation';
 
 export const metadata = {
 	title: 'Hotel Central',
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='de'>
 			<body id='root'>
+				<Navigation />
 				<main>{children}</main>
 			</body>
 		</html>

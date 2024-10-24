@@ -9,7 +9,6 @@ import { client, sanityOptions } from '../sanity/client';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { EventContent } from '../types/eventContent';
 import EventItem from '@/components/eventItem';
-import Image from 'next/image';
 
 const components: PortableTextComponents = {
 	block: {
@@ -18,22 +17,12 @@ const components: PortableTextComponents = {
 };
 
 export default function Frontpage() {
-	const [small, setSmall] = useState(false);
 	const [content, setContent] = useState<PageContent | undefined>(undefined);
 	const [events, setEvents] = useState<EventContent[] | undefined>(undefined);
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', () => setSmall(window.scrollY > 32));
-		}
 		void getContent();
 		void getEvents();
-
-		return () => {
-			if (typeof window !== 'undefined') {
-				window.removeEventListener('scroll', () => setSmall(window.scrollY > 32));
-			}
-		};
 	}, []);
 
 	const getContent = async () => {
@@ -48,23 +37,7 @@ export default function Frontpage() {
 
 	return (
 		<section id='frontpage' className='flex flex-col content-center'>
-			<div
-				className={`flex mt-4 justify-center text-black self-center ${
-					small ? 'md:w-1/5 w-1/2' : ' md:w-1/3 w-1/2'
-				} fixed z-0 ease-in-out duration-300 max-w-xl`}>
-				<Link href={'/'}>
-					<Image
-						src='/wordmark-round.svg'
-						width={483}
-						height={207}
-						alt='Hotel Central Logo'
-						className='inline-block'
-						unoptimized
-					/>
-				</Link>
-			</div>
-
-			<div className='z-10 mt-40 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-56 md:max-w-md'>
+			<div className='z-10 mt-52 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-64 md:max-w-md'>
 				<p className='mb-4 uppercase tracking-wider'>{content?.headline}</p>
 				{content && <PortableText value={content.content} components={components} />}
 			</div>
