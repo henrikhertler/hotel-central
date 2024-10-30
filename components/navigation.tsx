@@ -18,7 +18,7 @@ export default function Navigation() {
 		{ name: 'Vision', href: '/vision' },
 		{
 			name: 'Festival', href: '/festival/2024', subItems: [
-				{ name: '2023', href: '/festival/2024' },
+				{ name: '2023', href: '/festival/2023' },
 				{ name: '2024', href: '/festival/2024' }
 			]
 		},
