@@ -4,6 +4,7 @@ import { createMouseSpinner, imageAroundMouse } from '../utility/animations';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import LogoHotelCentral from '@/components/icons/hotelCentral';
 import SmileyRing from '@/components/icons/smiley';
+import LogoIconStuttgart from '@/components/icons/logoIconStuttgart';
 
 export default function Festival2024() {
 	const smileyRef = useRef<any>();
@@ -26,37 +27,54 @@ export default function Festival2024() {
 
 	return (
 		<div className={'content pt-[80px]'}>
-			<section className='flex h-full flex-col p-6 mb-[10rem]'
+			<section className='flex h-full flex-col p-6 md:mb-[10rem]'
 					 onMouseMove={e => imageAroundMouse(e, smileyRef.current)}>
-				<div ref={smileyRef} className='pointer-events-none smiley'>
+				<div ref={smileyRef} className={'pointer-events-none smiley hidden md:block'}>
 					<SmileyRing />
 				</div>
 
-				<div className='text-center text-black heroText text-[6rem]'>
-					<p className={'italic leading-[4.4rem]'}>Festival<br />Hotel<br />Central</p>
-					<p className={'leading-[4.2rem]'}>Inter<br />Change<br />05.–17.<br />Nov. 24</p>
+				<div className='text-center text-black heroText'>
+					<p className={'italic text-[4rem] leading-[3rem] md:text-[6rem] md:leading-[4.5rem]'}>Festival<br />Hotel<br />Central</p>
+					<p className={'bold text-[5rem] leading-[3.5rem] md:text-[7rem] md:leading-[4.9rem]'}>Inter<br />Change<br />05.–17.<br />Nov. 24</p>
 				</div>
 			</section>
+			<section className={'mb-[10rem]'}>
+				<div className={'flex z-20 justify-end mt-14 md:mt-0 md:fixed md:top-1/4 md:right-0 uppercase'}>
+					<p className={'p-3 pr-12 md:pr-32 text-[var(--violet)] text-sm bg-white rounded-l-lg'}>Festival für Musik,<br />Kultur und
+						Austausch<br />in Stuttgart</p>
+				</div>
+				<div
+					className={'flex z-20 justify-start mt-4 md:mt-0 text-right md:text-left md:fixed md:top-1/2 md:left-0 uppercase'}>
+					<p className={'p-3 pl-8 md:pl-40 text-[var(--violet)] text-sm bg-white rounded-r-lg'}>
+						Kreativ-Workshops,<br />Paneltalks,<br />Live-Konzerte
+						<br />und vieles mehr
+					</p>
+				</div>
+			</section>
+			<section>
+				<SmileyRing className={'absolute z-10 -top-[8rem] md:top-0 -left-[16rem] md:-left-[8rem] w-[30rem] text-[var(--violet)]'} />
+				<SmileyRing className={'absolute -z-10 md:z-40 top-1/2 -right-[8rem] w-[22rem] text-[var(--violet)]'} />
+			</section>
 			<section className={'w-full fixed bottom-0 flex justify-around h-[5rem]'}>
-				<div className={'bubble w-2/12 p-2'}>
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
 					<img src='/icon__initiative--musik.svg' alt='Initiative Musik'
 						 className='self-center' />
 				</div>
-				<div className={'bubble w-2/12 p-2'}>
-					<img src='/icon_stuttgart.svg' alt='Stadt Stuttgart' className='self-center' />
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
+					<LogoIconStuttgart className={'self-center'} />
 				</div>
-				<div className={'bubble w-2/12 p-2'}>
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
 					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart'
 						 className='self-center' />
 				</div>
-				<div className={'bubble w-4/12 py-2'}>
+				<div className={'bubble md:w-4/12 py-2 hidden md:flex'}>
 					<SmileyRing className={'self-center text-white'} />
 					<SmileyRing className={'self-center text-white'} />
 					<SmileyRing className={'self-center text-white'} />
 					<SmileyRing className={'self-center text-white hidden sm:block'} />
 					<SmileyRing className={'self-center text-white hidden md:block'} />
 				</div>
-				<div className={'bubble w-2/12 p-2'}>
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
 					<LogoHotelCentral className={'self-center text-white'} />
 				</div>
 			</section>
