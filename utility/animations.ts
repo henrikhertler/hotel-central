@@ -4,7 +4,7 @@ import { Expo } from 'gsap/gsap-core';
 
 const radius = 250 / 2;
 
-export function creatMouseSpinner(cursor: HTMLDivElement) {
+export function createMouseSpinner(cursor: HTMLDivElement) {
 	let rotate = gsap.timeline({ repeat: -1 });
 
 	gsap.set(cursor, {

@@ -9,7 +9,6 @@ import { client, sanityOptions } from '../sanity/client';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { EventContent } from '../types/eventContent';
 import EventItem from '@/components/eventItem';
-import Image from 'next/image';
 
 const components: PortableTextComponents = {
 	block: {
@@ -18,22 +17,12 @@ const components: PortableTextComponents = {
 };
 
 export default function Frontpage() {
-	const [small, setSmall] = useState(false);
 	const [content, setContent] = useState<PageContent | undefined>(undefined);
 	const [events, setEvents] = useState<EventContent[] | undefined>(undefined);
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', () => setSmall(window.scrollY > 32));
-		}
 		void getContent();
 		void getEvents();
-
-		return () => {
-			if (typeof window !== 'undefined') {
-				window.removeEventListener('scroll', () => setSmall(window.scrollY > 32));
-			}
-		};
 	}, []);
 
 	const getContent = async () => {
@@ -48,23 +37,7 @@ export default function Frontpage() {
 
 	return (
 		<section id='frontpage' className='flex flex-col content-center'>
-			<div
-				className={`flex mt-4 justify-center text-black self-center ${
-					small ? 'md:w-1/5 w-1/2' : ' md:w-1/3 w-1/2'
-				} fixed z-0 ease-in-out duration-300 max-w-xl`}>
-				<Link href={'/'}>
-					<Image
-						src='/wordmark-round.svg'
-						width={483}
-						height={207}
-						alt='Hotel Central Logo'
-						className='inline-block'
-						unoptimized
-					/>
-				</Link>
-			</div>
-
-			<div className='z-10 mt-40 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-56 md:max-w-md'>
+			<div className='z-10 mt-52 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-64 md:max-w-md'>
 				<p className='mb-4 uppercase tracking-wider'>{content?.headline}</p>
 				{content && <PortableText value={content.content} components={components} />}
 			</div>
@@ -73,37 +46,37 @@ export default function Frontpage() {
 				<div>
 					<div className='rounded bg-white p-6 px-8 text-center text-black'>
 						<p className='mb-4 uppercase tracking-wider'>Folge uns</p>
-						<a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
+						<Link className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
 							@hotel__central
-						</a>
+						</Link>
 					</div>
 					<div className='mt-20 rounded bg-white p-6 px-8 text-center text-black'>
 						<p className='mb-4 uppercase tracking-wider'>Werde Mitglied!</p>
-						<a className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
+						<Link className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
 							Download Antrag
-						</a>
+						</Link>
 					</div>
 				</div>
 				<Link href='/festival'>
-					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[#ffa3b5]'>
+					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[var(--violet)]'>
 						<p className='mb-4 pt-3 uppercase tracking-wider'>
-							Hotel Central
-							<br />
 							Festival
+							<br />
+							Hotel Central
 						</p>
 					</div>
 				</Link>
 			</div>
 
 			<div className='z-10 mt-40 flex w-10/12 flex-col items-center justify-end self-center md:mt-16 md:w-1/2 md:flex-row'>
-				<a href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
+				<Link href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
 					<div className='mt-40 mr-14 flex flex-col items-center rounded bg-black p-6 px-12 text-center text-white md:mt-8'>
 						<p className='mb-4 uppercase tracking-wider'>
 							Folge unserem <br /> lobby radio
 						</p>
 						<img src={'/icon__lobby--radio.svg'} alt={'lobby radio'} width='100px' />
 					</div>
-				</a>
+				</Link>
 			</div>
 
 			{events?.map(({ date, name, location }, index) => (

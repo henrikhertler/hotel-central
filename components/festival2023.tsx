@@ -6,7 +6,7 @@ import LogoSmiley from '@/components/icons/logoSmiley';
 import RosaGraph from '@/components/icons/rosaGraph';
 import SupporterLogos from '@/components/supporterLogos';
 import Link from 'next/link';
-import { creatMouseSpinner, imageAroundMouse, triaAnimation, welcomeTextAnimation } from '../utility/animations';
+import { createMouseSpinner, imageAroundMouse, triaAnimation, welcomeTextAnimation } from '../utility/animations';
 import Workshops from '@/components/festival/workshops';
 import Marathon from '@/components/festival/marathon';
 import HotelCentralFestival from '@/components/festival/hotelCentral';
@@ -34,7 +34,7 @@ export default function FestivalComponent() {
 
 	useLayoutEffect(() => {
 		if (smileyRef.current) {
-			creatMouseSpinner(smileyRef.current);
+			createMouseSpinner(smileyRef.current);
 		}
 
 		if (tria_1.current && tria_2.current && tria_3.current) {
@@ -48,7 +48,7 @@ export default function FestivalComponent() {
 				word_3.current,
 				word_4.current,
 				word_5.current,
-				word_6.current,
+				word_6.current
 			);
 		}
 	}, [smileyRef.current]);
@@ -58,7 +58,8 @@ export default function FestivalComponent() {
 			<div ref={smileyRef} className='smiley pointer-events-none'>
 				<SmileyRing />
 			</div>
-			<div className='big-text relative text-center text-[5rem] leading-[5.5rem] md:text-[8rem] md:leading-[7.5rem] overflow-hidden'>
+			<div
+				className='big-text relative text-center text-[5rem] leading-[5.5rem] md:text-[8rem] md:leading-[7.5rem] overflow-hidden'>
 				<div
 					ref={tria_1}
 					className='triangle top-[0] md:top-[80px] w-[250%] left-[-75%] md:w-[100%] md:left-[0]'
@@ -122,7 +123,8 @@ export default function FestivalComponent() {
 			</div>
 
 			<div className='w-3/4 self-center'>
-				<div className='flex flex-col md:flex-row self-center bg-[#F5F5F5] text-[#ffa3b5] text-2xl cursor-pointer'>
+				<div
+					className='flex flex-col md:flex-row self-center bg-[#F5F5F5] text-[#ffa3b5] text-2xl cursor-pointer'>
 					<div
 						onClick={() => setProgState(PROG_STATE.workshop)}
 						className={`w-full md:w-1/2 p-2 ${
