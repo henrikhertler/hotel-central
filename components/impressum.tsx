@@ -25,7 +25,7 @@ export default function Imprint() {
 	};
 
 	return (
-		<section className='flex flex-col content-center'>
+		<section className='flex flex-col content-center md:mb-[30rem]'>
 			<div className='flex flex-col self-center p-6 bg-white content-center text-black text-center rounded md:mt-56 mt-40 md:max-w-md w-10/12 z-10'>
 				{content && (
 					<>

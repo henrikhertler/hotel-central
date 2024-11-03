@@ -23,7 +23,11 @@ export default function Navigation() {
 				{ name: '2024', href: '/festival/2024' }
 			]
 		},
-		{ name: 'Mitglied werden', href: '/HotelCentral_230719_Mitgliedschaftsantrag.pdf', options: { target: '_blank' } }
+		{
+			name: 'Mitglied werden',
+			href: '/HotelCentral_230719_Mitgliedschaftsantrag.pdf',
+			options: { target: '_blank' }
+		}
 	];
 
 	useEffect(() => {
@@ -68,8 +72,10 @@ export default function Navigation() {
 					</div>
 				</div>
 			</div>
-			<nav className={`fixed md:w-full md:fixed z-50 top-0 right-0 md:top-[10rem] md:right-auto mx-auto md:flex md:justify-center md:p-4 ${hideMenu ? 'md:hidden' : 'md:block'}`}>
-				<div className={`md:mx-auto md:max-w-screen-xl bg-[#fbe5e9] md:bg-transparent ${isOpen ? 'w-screen h-screen' : ''}`}>
+			<nav
+				className={`fixed md:w-full md:fixed z-50 top-0 right-0 md:top-[10rem] md:right-auto mx-auto md:flex md:justify-center md:p-4 ${hideMenu ? 'md:hidden' : 'md:block'}`}>
+				<div
+					className={`md:mx-auto md:max-w-screen-xl bg-[#fbe5e9] md:bg-transparent ${isOpen ? 'w-screen h-screen' : ''}`}>
 					<button
 						type='button'
 						className='absolute top-2 right-2 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-black focus:outline-none focus:ring-2 md:hidden'
@@ -87,7 +93,7 @@ export default function Navigation() {
 					</button>
 
 					<div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-						<ul className='text-center md:text-left text-xl md:text-lg mt-4 flex flex-col rounded-lg p-4 font-medium rtl:space-x-reverse md:space-x-8 md:mt-0 md:flex-row md:border-0 md:p-0'>
+						<ul className='text-center md:text-left text-xl md:text-lg flex flex-col rounded-lg p-4 font-medium rtl:space-x-reverse md:space-x-8 md:mt-0 md:flex-row md:border-0 md:p-0'>
 							{menuItems.map((item) => (
 								<li key={item.name}
 									className={`mt-4 relative ${item.subItems ? 'group dropdown pb-2' : ''}`}>
@@ -111,6 +117,14 @@ export default function Navigation() {
 								</li>
 							))}
 						</ul>
+						<Image
+							src='/wordmark-round.svg'
+							width={483}
+							height={207}
+							alt='Hotel Central Logo'
+							className={'absolute md:hidden w-1/2 m-auto bottom-[3rem] left-0 right-0'}
+							unoptimized
+						/>
 					</div>
 				</div>
 			</nav>
