@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { NavigationItem } from '../types/navigationItem';
 
 export default function Navigation() {
 	const pathname = usePathname();
@@ -13,16 +14,16 @@ export default function Navigation() {
 
 	const active = (pageSlug: string) => pathname === pageSlug;
 
-	const menuItems = [
+	const menuItems: NavigationItem[] = [
 		{ name: 'Der Verein', href: '/' },
-		{ name: 'Vision', href: '/vision' },
+		/*{ name: 'Vision', href: '/vision' },*/
 		{
 			name: 'Festival', href: '/festival/2024', subItems: [
 				{ name: '2023', href: '/festival/2023' },
 				{ name: '2024', href: '/festival/2024' }
 			]
 		},
-		{ name: 'Mitglied werden', href: '/mitglied-werden' }
+		{ name: 'Mitglied werden', href: '/HotelCentral_230719_Mitgliedschaftsantrag.pdf', options: { target: '_blank' } }
 	];
 
 	useEffect(() => {
@@ -90,7 +91,7 @@ export default function Navigation() {
 							{menuItems.map((item) => (
 								<li key={item.name}
 									className={`mt-4 relative ${item.subItems ? 'group dropdown pb-2' : ''}`}>
-									<Link href={item.href}
+									<Link href={item.href} target={item.options?.target ?? '_self'}
 										  className={`block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-[#ffa3b5] ${active(item.href) ? 'underline underline-offset-8' : ''}`}>
 										{item.name}
 									</Link>

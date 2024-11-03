@@ -46,37 +46,37 @@ export default function Frontpage() {
 				<div>
 					<div className='rounded bg-white p-6 px-8 text-center text-black'>
 						<p className='mb-4 uppercase tracking-wider'>Folge uns</p>
-						<a className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
+						<Link className='text-2xl' target='_blank' href='https://www.instagram.com/hotel__central/'>
 							@hotel__central
-						</a>
+						</Link>
 					</div>
 					<div className='mt-20 rounded bg-white p-6 px-8 text-center text-black'>
 						<p className='mb-4 uppercase tracking-wider'>Werde Mitglied!</p>
-						<a className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
+						<Link className='text-2xl' target='_blank' href='/HotelCentral_230719_Mitgliedschaftsantrag.pdf'>
 							Download Antrag
-						</a>
+						</Link>
 					</div>
 				</div>
 				<Link href='/festival'>
-					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[#ffa3b5]'>
+					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[var(--violet)]'>
 						<p className='mb-4 pt-3 uppercase tracking-wider'>
-							Hotel Central
-							<br />
 							Festival
+							<br />
+							Hotel Central
 						</p>
 					</div>
 				</Link>
 			</div>
 
 			<div className='z-10 mt-40 flex w-10/12 flex-col items-center justify-end self-center md:mt-16 md:w-1/2 md:flex-row'>
-				<a href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
+				<Link href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
 					<div className='mt-40 mr-14 flex flex-col items-center rounded bg-black p-6 px-12 text-center text-white md:mt-8'>
 						<p className='mb-4 uppercase tracking-wider'>
 							Folge unserem <br /> lobby radio
 						</p>
 						<img src={'/icon__lobby--radio.svg'} alt={'lobby radio'} width='100px' />
 					</div>
-				</a>
+				</Link>
 			</div>
 
 			{events?.map(({ date, name, location }, index) => (

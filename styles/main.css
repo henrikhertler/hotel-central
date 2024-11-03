@@ -31,6 +31,7 @@
     --rosaRGB: 255, 163, 181;
     --violet: #6756e0;
     --violetRGB: 103, 86, 224;
+    --rosaToRed: linear-gradient(to bottom, #fbe5e9 0%, #fbe5e9 60%, #E73628 100%);
 }
 
 *,
@@ -226,7 +227,7 @@ a {
 
 main#festival2024 {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #fbe5e9 0%, #fbe5e9 60%, #E73628 100%);
+    background: var(--rosaToRed);
     position: relative;
     overflow-x: hidden;
 
@@ -275,6 +276,10 @@ main#festival2024 {
                 font-weight: 900;
                 font-style: normal;
             }
+        }
+
+        .programm {
+            background: var(--rosaToRed);
         }
 
         .bubble {
