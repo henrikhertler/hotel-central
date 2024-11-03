@@ -86,10 +86,10 @@ export default function Festival2024() {
 					<img src='/icon__initiative--musik.svg' alt='Initiative Musik'
 						 className='flex' />
 				</div>
-				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<LogoIconStuttgart className={'self-center'} />
+				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
+					<LogoIconStuttgart />
 				</div>
-				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
+				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
 					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' />
 				</div>
 				<div className={'bubble md:w-4/12 py-2 hidden md:flex'}>
@@ -104,7 +104,7 @@ export default function Festival2024() {
 					<SmileyRing className={'text-white hidden lg:block'} />
 				</div>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<Link href={'/'} className={'w-full flex justify-center'}>
+					<Link href={'/'} className={'w-full flex justify-center items-center'}>
 						<LogoHotelCentral className={'text-white'} />
 					</Link>
 				</div>

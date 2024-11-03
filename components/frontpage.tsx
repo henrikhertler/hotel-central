@@ -37,7 +37,7 @@ export default function Frontpage() {
 
 	return (
 		<section id='frontpage' className='flex flex-col content-center'>
-			<div className='z-10 mt-52 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-64 md:max-w-md'>
+			<div className='z-10 mt-36 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-64 md:max-w-md'>
 				<p className='mb-4 uppercase tracking-wider'>{content?.headline}</p>
 				{content && <PortableText value={content.content} components={components} />}
 			</div>
@@ -68,7 +68,7 @@ export default function Frontpage() {
 				</Link>
 			</div>
 
-			<div className='z-10 mt-40 flex w-10/12 flex-col items-center justify-end self-center md:mt-16 md:w-1/2 md:flex-row'>
+			<div className='z-10 mb-20 mt-40 flex w-10/12 flex-col items-center justify-end self-center md:mt-16 md:w-1/2 md:flex-row'>
 				<Link href={'https://soundcloud.com/lobby-radio'} target={'_blank'}>
 					<div className='mt-40 mr-14 flex flex-col items-center rounded bg-black p-6 px-12 text-center text-white md:mt-8'>
 						<p className='mb-4 uppercase tracking-wider'>

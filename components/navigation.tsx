@@ -51,6 +51,14 @@ export default function Navigation() {
 		};
 	}, []);
 
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add('overflow-hidden');
+		} else {
+			document.body.classList.remove('overflow-hidden');
+		}
+	}, [isOpen]);
+
 	return (
 		<>
 			<div className={'fixed w-full'}>
@@ -78,7 +86,7 @@ export default function Navigation() {
 					className={`md:mx-auto md:max-w-screen-xl bg-[#fbe5e9] md:bg-transparent ${isOpen ? 'w-screen h-screen' : ''}`}>
 					<button
 						type='button'
-						className='absolute top-2 right-2 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-black focus:outline-none focus:ring-2 md:hidden'
+						className='absolute z-30 top-6 right-6 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-black focus:outline-none focus:ring-2 md:hidden'
 						onClick={() => setIsOpen(!isOpen)}>
 						<span className='sr-only'>Open main menu</span>
 						<svg
@@ -122,7 +130,7 @@ export default function Navigation() {
 							width={483}
 							height={207}
 							alt='Hotel Central Logo'
-							className={'absolute md:hidden w-1/2 m-auto bottom-[3rem] left-0 right-0'}
+							className={'absolute md:hidden w-1/2 m-auto bottom-[12rem] left-0 right-0'}
 							unoptimized
 						/>
 					</div>
