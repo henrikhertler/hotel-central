@@ -84,25 +84,28 @@ export default function Festival2024() {
 			<section className={'w-full fixed bottom-0 flex justify-around h-[5rem]'}>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
 					<img src='/icon__initiative--musik.svg' alt='Initiative Musik'
-						 className='self-center' />
+						 className='flex' />
 				</div>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
 					<LogoIconStuttgart className={'self-center'} />
 				</div>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart'
-						 className='self-center' />
+					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' />
 				</div>
 				<div className={'bubble md:w-4/12 py-2 hidden md:flex'}>
-					<SmileyRing className={'self-center text-white'} />
-					<SmileyRing className={'self-center text-white'} />
-					<SmileyRing className={'self-center text-white'} />
-					<SmileyRing className={'self-center text-white hidden sm:block'} />
-					<SmileyRing className={'self-center text-white hidden md:block'} />
+					<SmileyRing className={'text-white'} />
+					<SmileyRing className={'text-white'} />
+					<SmileyRing className={'text-white'} />
+					<SmileyRing className={'text-white hidden sm:block'} />
+					<SmileyRing className={'text-white hidden md:block'} />
+					<SmileyRing className={'text-white hidden lg:block'} />
+					<SmileyRing className={'text-white hidden lg:block'} />
+					<SmileyRing className={'text-white hidden lg:block'} />
+					<SmileyRing className={'text-white hidden lg:block'} />
 				</div>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<Link href={'/'} className={'w-full flex'}>
-						<LogoHotelCentral className={'self-center text-white'} />
+					<Link href={'/'} className={'w-full flex justify-center'}>
+						<LogoHotelCentral className={'text-white'} />
 					</Link>
 				</div>
 			</section>
