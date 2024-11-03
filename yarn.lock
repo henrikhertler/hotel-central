@@ -4453,7 +4453,7 @@ log-symbols@^4.1.0:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
 
-loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
+loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -5359,13 +5359,12 @@ react-copy-to-clipboard@^5.0.4:
     copy-to-clipboard "^3.3.1"
     prop-types "^15.8.1"
 
-react-dom@^18.3.1:
-  version "18.3.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
-  integrity sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==
+react-dom@^19.0.0-rc-7c8e5e7a-20241101:
+  version "19.0.0-rc-7c8e5e7a-20241101"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-7c8e5e7a-20241101.tgz#e90ba5c06059483298a6db60e1d9b336220aaaa9"
+  integrity sha512-p2d+9xTM1xifv0VJd8WJ6WkdaWKaJfOcVIcHKskgaEic+bktU+SvdSzF5K7KpnUdgU9fZA0EAqurLMyqZaheYg==
   dependencies:
-    loose-envify "^1.1.0"
-    scheduler "^0.23.2"
+    scheduler "0.25.0-rc-7c8e5e7a-20241101"
 
 react-fast-compare@^3.2.0:
   version "3.2.2"
@@ -5424,12 +5423,10 @@ react-rx@^4.0.0:
     observable-callback "^1.0.3"
     use-effect-event "^1.0.2"
 
-react@^18.3.1:
-  version "18.3.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
-  integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
-  dependencies:
-    loose-envify "^1.1.0"
+react@^19.0.0-rc-7c8e5e7a-20241101:
+  version "19.0.0-rc-fb9a90fa48-20240614"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0-rc-fb9a90fa48-20240614.tgz#90eb43a0b005e8cc3cbf0d801c14816d01df1b08"
+  integrity sha512-nvE3Gy+IOIfH/DXhkyxFVQSrITarFcQz4+shzC/McxQXEUSonpw2oDy/Wi9hdDtV3hlP12VYuDL95iiBREedNQ==
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -5827,12 +5824,10 @@ saxes@^6.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@^0.23.2:
-  version "0.23.2"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.2.tgz#414ba64a3b282892e944cf2108ecc078d115cdc3"
-  integrity sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==
-  dependencies:
-    loose-envify "^1.1.0"
+scheduler@0.25.0-rc-7c8e5e7a-20241101:
+  version "0.25.0-rc-7c8e5e7a-20241101"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-7c8e5e7a-20241101.tgz#44a8e0d95f44f393370b8b73d2f08fb21b9617f9"
+  integrity sha512-6mc2ctXvVbpv4oEFIPjCacS+f+NaydfjptZx+8BK4aFr5WsqwcZYYekwCFnbACkcROBH1yeqOy/WilmCdMKw8A==
 
 scroll-into-view-if-needed@^3.0.3, scroll-into-view-if-needed@^3.1.0:
   version "3.1.0"

@@ -57,7 +57,7 @@ export default function Frontpage() {
 						</Link>
 					</div>
 				</div>
-				<Link href='/festival'>
+				<Link href='/festival/2024'>
 					<div className='text-white md:mt-8 mt-40 rounded p-6 px-8 text-center bg-[var(--violet)]'>
 						<p className='mb-4 pt-3 uppercase tracking-wider'>
 							Festival
