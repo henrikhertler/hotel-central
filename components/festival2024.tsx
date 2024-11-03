@@ -103,8 +103,8 @@ export default function Festival2024() {
 					<SmileyRing className={'text-white hidden lg:block'} />
 					<SmileyRing className={'text-white hidden lg:block'} />
 				</div>
-				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<Link href={'/'} className={'w-full flex justify-center items-center'}>
+				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
+					<Link href={'/'} className={'w-full'}>
 						<LogoHotelCentral className={'text-white'} />
 					</Link>
 				</div>
