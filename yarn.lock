@@ -5360,11 +5360,11 @@ react-copy-to-clipboard@^5.0.4:
     prop-types "^15.8.1"
 
 react-dom@^19.0.0-rc-7c8e5e7a-20241101:
-  version "19.0.0-rc-7c8e5e7a-20241101"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-7c8e5e7a-20241101.tgz#e90ba5c06059483298a6db60e1d9b336220aaaa9"
-  integrity sha512-p2d+9xTM1xifv0VJd8WJ6WkdaWKaJfOcVIcHKskgaEic+bktU+SvdSzF5K7KpnUdgU9fZA0EAqurLMyqZaheYg==
+  version "19.0.0-rc-fb9a90fa48-20240614"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-fb9a90fa48-20240614.tgz#8dce9ed0650096d65437e4bce790628e483831a2"
+  integrity sha512-PoEsPe32F7KPLYOBvZfjylEI1B67N44PwY3lyvpmBkhlluLnLz0jH8q2Wg9YidAi6z0k3iUnNRm5x10wurzt9Q==
   dependencies:
-    scheduler "0.25.0-rc-7c8e5e7a-20241101"
+    scheduler "0.25.0-rc-fb9a90fa48-20240614"
 
 react-fast-compare@^3.2.0:
   version "3.2.2"
@@ -5824,10 +5824,10 @@ saxes@^6.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.25.0-rc-7c8e5e7a-20241101:
-  version "0.25.0-rc-7c8e5e7a-20241101"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-7c8e5e7a-20241101.tgz#44a8e0d95f44f393370b8b73d2f08fb21b9617f9"
-  integrity sha512-6mc2ctXvVbpv4oEFIPjCacS+f+NaydfjptZx+8BK4aFr5WsqwcZYYekwCFnbACkcROBH1yeqOy/WilmCdMKw8A==
+scheduler@0.25.0-rc-fb9a90fa48-20240614:
+  version "0.25.0-rc-fb9a90fa48-20240614"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-fb9a90fa48-20240614.tgz#9ee11063b7c0f47aef3fea53d9f1be3f13794dce"
+  integrity sha512-HHqQ/SqbeiDfXXVKgNxTpbQTD4n7IUb4hZATvHjp03jr3TF7igehCyHdOjeYTrzIseLO93cTTfSb5f4qWcirMQ==
 
 scroll-into-view-if-needed@^3.0.3, scroll-into-view-if-needed@^3.1.0:
   version "3.1.0"
