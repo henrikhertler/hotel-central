@@ -83,29 +83,28 @@ export default function Festival2024() {
 			</section>
 			<section className={'w-full fixed bottom-0 flex justify-around h-[5rem]'}>
 				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
-					<img src='/icon__initiative--musik.svg' alt='Initiative Musik'
-						 className='flex' />
+					<img src='/icon__initiative--musik.svg' alt='Initiative Musik' className='flex' />
 				</div>
-				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
+				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2 md:px-6'}>
 					<LogoIconStuttgart />
 				</div>
-				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
-					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' />
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2 md:px-8'}>
+					<img src='/icon_popbuero.png' alt='Pop-Büro Region Stuttgart' className={'object-contain h-full'} />
 				</div>
 				<div className={'bubble md:w-4/12 py-2 hidden md:flex'}>
-					<SmileyRing className={'text-white'} />
-					<SmileyRing className={'text-white'} />
-					<SmileyRing className={'text-white'} />
-					<SmileyRing className={'text-white hidden sm:block'} />
-					<SmileyRing className={'text-white hidden md:block'} />
-					<SmileyRing className={'text-white hidden lg:block'} />
-					<SmileyRing className={'text-white hidden lg:block'} />
-					<SmileyRing className={'text-white hidden lg:block'} />
-					<SmileyRing className={'text-white hidden lg:block'} />
+					<SmileyRing className={'text-white h-full'} />
+					<SmileyRing className={'text-white h-full'} />
+					<SmileyRing className={'text-white h-full'} />
+					<SmileyRing className={'text-white hidden sm:block h-full'} />
+					<SmileyRing className={'text-white hidden md:block h-full'} />
+					<SmileyRing className={'text-white hidden lg:block h-full'} />
+					<SmileyRing className={'text-white hidden lg:block h-full'} />
+					<SmileyRing className={'text-white hidden lg:block h-full'} />
+					<SmileyRing className={'text-white hidden lg:block h-full'} />
 				</div>
-				<div className={'bubble flex items-center w-3/12 md:w-2/12 p-2'}>
-					<Link href={'/'} className={'w-full'}>
-						<LogoHotelCentral className={'text-white'} />
+				<div className={'bubble flex w-3/12 md:w-2/12 p-2'}>
+					<Link href={'/'} className={'flex justify-center w-full'}>
+						<LogoHotelCentral className={'text-white h-full'} />
 					</Link>
 				</div>
 			</section>
