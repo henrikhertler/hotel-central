@@ -16,7 +16,8 @@ export default function Navigation() {
 
 	const menuItems: NavigationItem[] = [
 		{ name: 'Der Verein', href: '/' },
-		/*{ name: 'Vision', href: '/vision' },*/
+		{ name: 'Vision', href: '/vision' },
+		{ name: 'Events', href: '/events' },
 		{
 			name: 'Festival', href: '/festival/2024', subItems: [
 				{ name: '2023', href: '/festival/2023' },

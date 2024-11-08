@@ -2,6 +2,7 @@ import '@/styles/main.css';
 import '@/styles/chrome-bug.css';
 import { ReactNode } from 'react';
 import Navigation from '../../components/navigation';
+import Footer from '@/components/footer';
 
 export const metadata = {
 	title: 'Hotel Central',
@@ -32,8 +33,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang='de'>
 			<body id='root'>
 				<Navigation />
-				<main>{children}</main>
+				<main>
+					<section id='frontpage' className='flex flex-col content-center pt-36 md:pt-64'>
+						{children}
+						<Footer />
+					</section>
+				</main>
 			</body>
 		</html>
-	);
+);
 }

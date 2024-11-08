@@ -2,13 +2,10 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import SupporterLogos from '@/components/supporterLogos';
 import { PageContent } from '../types/pageContent';
 import { defineQuery } from 'groq';
 import { client, sanityOptions } from '../sanity/client';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
-import { EventContent } from '../types/eventContent';
-import EventItem from '@/components/eventItem';
 
 const components: PortableTextComponents = {
 	block: {
@@ -18,11 +15,9 @@ const components: PortableTextComponents = {
 
 export default function Frontpage() {
 	const [content, setContent] = useState<PageContent | undefined>(undefined);
-	const [events, setEvents] = useState<EventContent[] | undefined>(undefined);
 
 	useEffect(() => {
 		void getContent();
-		void getEvents();
 	}, []);
 
 	const getContent = async () => {
@@ -30,14 +25,8 @@ export default function Frontpage() {
 		setContent(await client.fetch<PageContent>(CONTENT_QUERY, {}, sanityOptions));
 	};
 
-	const getEvents = async () => {
-		const EVENT_QUERY = defineQuery(`*[_type == 'event'] | order(date desc) {date, name, location}`);
-		setEvents(await client.fetch<EventContent[]>(EVENT_QUERY, {}, sanityOptions));
-	};
-
-	return (
-		<section id='frontpage' className='flex flex-col content-center'>
-			<div className='z-10 mt-36 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:mt-64 md:max-w-md'>
+	return (<>
+			<div className='z-10 flex w-10/12 flex-col content-center self-center rounded bg-white p-6 text-center text-black md:max-w-md'>
 				<p className='mb-4 uppercase tracking-wider'>{content?.headline}</p>
 				{content && <PortableText value={content.content} components={components} />}
 			</div>
@@ -78,20 +67,6 @@ export default function Frontpage() {
 					</div>
 				</Link>
 			</div>
-
-			{events?.map(({ date, name, location }, index) => (
-				<EventItem key={name} index={index} date={date} name={name} location={location} />
-			))}
-
-			<div className='z-10 mt-60 mb-60 w-1/2 self-center md:w-1/6'>
-				<img src='/icon-smiley.svg' alt='Smileys Logo' className='inline-block' />
-			</div>
-
-			<SupporterLogos />
-
-			<div className='z-10 mt-60 mb-12 self-center text-black'>
-				<Link href={'/impressum'}>Impressum</Link>
-			</div>
-		</section>
+		</>
 	);
 }
