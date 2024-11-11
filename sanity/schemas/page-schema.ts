@@ -1,4 +1,4 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 export const pageSchema = defineType({
 	name: 'page',
@@ -10,31 +10,39 @@ export const pageSchema = defineType({
 			name: 'name',
 			title: 'Title',
 			description: 'Internal use only',
-			type: 'string',
+			type: 'string'
 		}),
 		defineField({
 			name: 'headline',
 			title: 'Headline',
-			type: 'string',
+			type: 'string'
 		}),
 		defineField({
 			name: 'content',
 			title: 'Content',
 			type: 'array',
-			// @ts-ignore
-			of: [defineArrayMember({ type: 'block' })],
-		}),
+			of: [{ type: 'block' }, {
+				type: 'image', fields: [
+					{
+						name: 'alt',
+						type: 'string',
+						title: 'Alternative text',
+						description: 'Important for SEO and accessibility'
+					}
+				]
+			}]
+		})
 	],
 	preview: {
 		select: {
 			title: 'name',
-			content: 'content',
+			content: 'content'
 		},
 		prepare({ title, content }) {
 			return {
 				title,
-				subtitle: content[0]?.children[0]?.text,
+				subtitle: content[0]?.children[0]?.text
 			};
-		},
-	},
+		}
+	}
 });

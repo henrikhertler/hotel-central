@@ -245,6 +245,12 @@ main#festival2024 {
         margin: 8px;
     }
 
+    @media (max-width: 768px) {
+        &::before {
+            background-size: calc(calc(100vw - 16px) / 8) calc(calc(100vw - 16px) / 8);
+        }
+    }
+
     .content {
         min-height: 100vh;
         position: relative;

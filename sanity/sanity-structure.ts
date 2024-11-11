@@ -9,12 +9,12 @@ export const sanityStructure: StructureResolver = S =>
 				.title('Upcoming Events')
 				.schemaType('event')
 				.icon(() => '🎉')
-				.child(S.documentList().title('Upcoming Events').filter('date > now()')),
+				.child(S.documentList().title('Upcoming Events').apiVersion('v2024-11-11').filter('date > now()')),
 			S.listItem()
 				.title('Past Events')
 				.schemaType('event')
 				.icon(() => '🎉')
-				.child(S.documentList().title('Past Events').filter('date < now()')),
+				.child(S.documentList().title('Past Events').apiVersion('v2024-11-11').filter('date < now()')),
 			S.divider(),
 			S.documentTypeListItem('page')
 				.title('Pages')

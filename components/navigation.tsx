@@ -107,6 +107,7 @@ export default function Navigation() {
 								<li key={item.name}
 									className={`mt-4 relative ${item.subItems ? 'group dropdown pb-2' : ''}`}>
 									<Link href={item.href} target={item.options?.target ?? '_self'}
+										  onClick={() => setIsOpen(false)}
 										  className={`block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-[#ffa3b5] ${active(item.href) ? 'underline underline-offset-8' : ''}`}>
 										{item.name}
 									</Link>
@@ -116,7 +117,7 @@ export default function Navigation() {
 											<ul className='flex flex-row text-sm text-gray-700 justify-center'>
 												{item.subItems.map((subItem) => (
 													<li key={subItem.name}>
-														<Link href={subItem.href}
+														<Link href={subItem.href} onClick={() => setIsOpen(false)}
 															  className='block px-4 py-2 hover:bg-[#fbe5e9]'>{subItem.name}</Link>
 													</li>
 												))}
