@@ -74,7 +74,60 @@ export const workshopData: WorkshopData = [
 			},
 		],
 	},
-
+	{
+		day: 'Mittwoch 08.11.',
+		workshops: [
+			{
+				time: '18 – 20 Uhr',
+				pills: ['Workshop', 'Steuer'],
+				title: 'Einführung Steuerbasics für Kreative',
+				description:
+					'Insbesondere in der Kreativbranche müssen sich Selbstständige am Anfang ihrer Karriere mit Fragen zum Steuerrecht beschäftigen. Welche Angaben muss ich wo einreichen? Wie schreibe ich eigentlich eine Rechnung? Und wie kann ich vermeiden, etwas falsch zu machen? Im Rahmen unseres Festivals checkt auch die Steuerberaterin Melina ins Hotel Central ein und klärt über die steuerlichen Aspekte hinter der Selbstständigkeit auf. Ganz egal, ob freischaffender Musiker:in, Fotograf:in oder Grafiker:in – Melina bietet im Workshop eine wertvolle Einführung in die Grundlagen des Steuerthemas und teilt ihr berufliches Wissen. Fragen sind willkommen, <a target="_blank" href="https://www.instagram.com/melinabre_/">Melina</a> freut sich auf eine offene Gesprächsrunde!',
+				person: {
+					name: 'mit Steuerberaterin <a target="_blank" href="https://www.instagram.com/melinabre_/">Melina</a>',
+				},
+				price: '20 Euro',
+				registerHref:
+					'https://www.instagram.com/p/CzBbJyaLuzI/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
+			},
+		],
+	},
+	{
+		day: 'Donnerstag 09.11.',
+		workshops: [
+			{
+				time: '17 – 19 Uhr',
+				pills: ['Workshop', 'Musiklabel'],
+				title: 'Einführung und Basics Musiklabel',
+				description:
+					'Verträge mit Künstler:innen schließen, Bookingprozesse durchblicken, Promotionmechanismen und Release-Events veranstalten – wenn man noch nie für ein Musiklabel gearbeitet hat, ist ein detaillierter Blick hinter die Kulissen fast unmöglich. Klar, viele Dokumentationen beschäftigen sich mit der Arbeit großer Major-Labels, aber wie sieht es eigentlich bei den unabhängigen Akteur:innen aus? Unser Workshop mit Benny und Jakob taucht in die Arbeit eines Independent Musiklabels ein und lüftet Geheimnisse von der Aufnahme bis zum fertigen Release. Benny war 16 Jahre lang (Mit-)Betreiber des internationalen Musiklabels Klangbad, Jakob hat sich als Artist, DJ, Producer und Gründer des Labels Constant Change über die Jahre hinweg ebenfalls eine Menge Knowledge angeeignet. Wer also schon immer mal Fragen an einen Experten der Musikbranche loswerden wollte, ist beim Workshop mit Benny und Jakob genau richtig!',
+				person: {
+					name: 'mit Stuttgarter Produzent <a target="_blank" href="https://www.instagram.com/jakobmaeder/">Jakob Mäder</a> und ehemaligem Labelbetreiber <a target="_blank" href="https://www.instagram.com/bennystraub/">Benny</a>',
+				},
+				price: '20 Euro',
+				registerHref:
+					'https://www.instagram.com/p/CzDhFN5L6fo/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
+			},
+		],
+	},
+	{
+		day: 'Samstag 11.11.',
+		workshops: [
+			{
+				time: '12 – 14 Uhr',
+				pills: ['Workshop', 'Producing'],
+				title: '„The art of producing“',
+				description:
+					'Der Workshop „The art of producing“ mit Jan Wagner bietet die perfekte Gelegenheit erste Berührungspunkte im Producing zu sammeln und gemeinschaftlich sowie kreativ mit Musik zu arbeiten. In einer gemeinsamen Musik-Session zeigt Jan, wie ein Musik-Projekt am besten angegangen, bearbeitet und schlussendlich auch erfolgreich abgeschlossen werden kann. Die eigene Kreativität kommt dabei nicht zu kurz – bei Interesse schaut Jan gerne über mitgebrachte Projekte und gibt Tipps für einen gelungenen Abschluss. Jan hat sich als Pianist, Producer und Sound Designer über die Jahre hinweg eine Menge Knowledge angeeignet, was ihn in der Vergangenheit zu gemeinsamen Projekten und Arbeiten mit Rosa Anschütz, Answer Code Request, Kobosil oder dem Berliner Label Ostgut geführt hat. Zu seinem Workshop läd er sowohl Anfänger:innen als auch Fortgeschrittene ein.',
+				person: {
+					name: 'mit Produzent <a target="_blank" href="https://www.instagram.com/jan__wagner/?img_index=1">Jan Wagner</a>',
+				},
+				price: '20 Euro',
+				registerHref:
+					'https://www.instagram.com/p/CzDhFN5L6fo/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==',
+			},
+		],
+	},
 ];
 
 export const marathonData: EventData = [
