@@ -18,7 +18,7 @@ const components: PortableTextComponents = {
 };
 
 export default function Festival2024() {
-	const smileyRef = useRef<any>();
+	const smileyRef = useRef<any>(null);
 
 	const [isMounted, setIsMounted] = useState(false);
 	const [content, setContent] = useState<PageContent | undefined>(undefined);

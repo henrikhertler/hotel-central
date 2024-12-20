@@ -19,16 +19,16 @@ enum PROG_STATE {
 }
 
 export default function FestivalComponent() {
-	const smileyRef = useRef<any>();
-	const tria_1 = useRef<any>();
-	const tria_2 = useRef<any>();
-	const tria_3 = useRef<any>();
-	const word_1 = useRef<any>();
-	const word_2 = useRef<any>();
-	const word_3 = useRef<any>();
-	const word_4 = useRef<any>();
-	const word_5 = useRef<any>();
-	const word_6 = useRef<any>();
+	const smileyRef = useRef<any>(null);
+	const tria_1 = useRef<any>(null);
+	const tria_2 = useRef<any>(null);
+	const tria_3 = useRef<any>(null);
+	const word_1 = useRef<any>(null);
+	const word_2 = useRef<any>(null);
+	const word_3 = useRef<any>(null);
+	const word_4 = useRef<any>(null);
+	const word_5 = useRef<any>(null);
+	const word_6 = useRef<any>(null);
 
 	const [progState, setProgState] = useState(PROG_STATE.workshop);
 

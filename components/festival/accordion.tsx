@@ -24,8 +24,7 @@ export const Accordion: React.FC<AccordionProps> = ({ time, title, pills, sublin
 
 	function toggleAccordion() {
 		setActive(prevState => !prevState);
-		// @ts-ignore
-		setHeight(active ? `${contentSpace.current.scrollHeight}px` : '0px');
+		setHeight(active ? `${contentSpace.current?.scrollHeight}px` : '0px');
 		setRotate(active ? 'transform duration-700 ease' : 'transform duration-700 ease rotate-0');
 	}
 
