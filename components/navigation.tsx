@@ -28,6 +28,11 @@ export default function Navigation() {
 			name: 'Mitglied werden',
 			href: '/HotelCentral_230719_Mitgliedschaftsantrag.pdf',
 			options: { target: '_blank' }
+		},
+		{
+			name: 'Offene Stellen',
+			href: '/jobs/ausschreibung_GS.pdf',
+			options: { target: '_blank' }
 		}
 	];
 
