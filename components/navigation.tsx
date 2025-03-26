@@ -29,11 +29,6 @@ export default function Navigation() {
 			href: '/HotelCentral_230719_Mitgliedschaftsantrag.pdf',
 			options: { target: '_blank' }
 		},
-		{
-			name: 'Offene Stellen',
-			href: '/jobs/ausschreibung_GS.pdf',
-			options: { target: '_blank' }
-		}
 	];
 
 	useEffect(() => {
